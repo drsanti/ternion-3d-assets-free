@@ -1,0 +1,84 @@
+{
+  "marker": "trn-node-asset",
+  "version": 1,
+  "meta": {
+    "id": "trn-demo-float-out",
+    "name": "Demo Float Output",
+    "description": "Official TRN sample preset — a float constant wired to the group output socket.",
+    "tags": ["official", "demo", "math"],
+    "category": "math",
+    "createdAt": "2026-05-16T12:00:00.000Z",
+    "updatedAt": "2026-05-16T12:00:00.000Z",
+    "appVersion": "0.0.0"
+  },
+  "nodes": [
+    {
+      "id": "ng_trn_demo_float_out",
+      "type": "nodeGroup",
+      "position": { "x": 120, "y": 80 },
+      "data": {
+        "graphTitle": "Demo Float Output",
+        "subgraphId": "sg_trn_demo_float_out"
+      },
+      "selected": false
+    }
+  ],
+  "edges": [],
+  "subgraphs": {
+    "sg_trn_demo_float_out": {
+      "nodes": [
+        {
+          "id": "sg_trn_demo_float_out_input",
+          "type": "groupInput",
+          "position": { "x": 40, "y": 120 },
+          "data": {
+            "role": "input",
+            "interface": {
+              "inputs": [],
+              "outputs": [{ "id": "sock_out_value", "label": "Value", "type": "float", "direction": "output" }]
+            }
+          },
+          "selected": false
+        },
+        {
+          "id": "float_demo_constant",
+          "type": "float",
+          "position": { "x": 280, "y": 100 },
+          "data": { "value": 1, "graphTitle": "Constant" },
+          "selected": false
+        },
+        {
+          "id": "sg_trn_demo_float_out_output",
+          "type": "groupOutput",
+          "position": { "x": 520, "y": 120 },
+          "data": {
+            "role": "output",
+            "interface": {
+              "inputs": [],
+              "outputs": [{ "id": "sock_out_value", "label": "Value", "type": "float", "direction": "output" }]
+            }
+          },
+          "selected": false
+        }
+      ],
+      "edges": [
+        {
+          "id": "e_float_to_out",
+          "source": "float_demo_constant",
+          "sourceHandle": "out",
+          "target": "sg_trn_demo_float_out_output",
+          "targetHandle": "sock_out_value"
+        }
+      ],
+      "interface": {
+        "inputs": [],
+        "outputs": [{ "id": "sock_out_value", "label": "Value", "type": "float", "direction": "output" }]
+      }
+    }
+  },
+  "dependencies": {
+    "modelUrls": [],
+    "hdriPresets": [],
+    "dataChannels": []
+  }
+}

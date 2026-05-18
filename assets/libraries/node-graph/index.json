@@ -2,5 +2,13 @@
   "marker": "trn-library-index",
   "version": 1,
   "libraryId": "nodeGraph",
-  "entries": []
+  "entries": [
+    {
+      "id": "trn-demo-float-out",
+      "name": "Demo Float Output",
+      "category": "math",
+      "file": "trn-demo-float-out.trn-node-asset.json",
+      "description": "Official TRN sample — float constant on group output."
+    }
+  ]
 }
