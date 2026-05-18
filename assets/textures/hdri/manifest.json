@@ -1,0 +1,52 @@
+[
+  {
+    "preset": "apartment",
+    "label": "Apartment (Lebombo)",
+    "file": "/assets/textures/hdri/apartment.hdr"
+  },
+  {
+    "preset": "city",
+    "label": "City (Potsdamer Platz)",
+    "file": "/assets/textures/hdri/city.hdr"
+  },
+  {
+    "preset": "dawn",
+    "label": "Dawn (Kiara)",
+    "file": "/assets/textures/hdri/dawn.hdr"
+  },
+  {
+    "preset": "forest",
+    "label": "Forest Slope",
+    "file": "/assets/textures/hdri/forest.hdr"
+  },
+  {
+    "preset": "lobby",
+    "label": "Lobby (St. Fagans)",
+    "file": "/assets/textures/hdri/lobby.hdr"
+  },
+  {
+    "preset": "night",
+    "label": "Night (Dikhololo)",
+    "file": "/assets/textures/hdri/night.hdr"
+  },
+  {
+    "preset": "park",
+    "label": "Park (Rooitou)",
+    "file": "/assets/textures/hdri/park.hdr"
+  },
+  {
+    "preset": "studio",
+    "label": "Studio",
+    "file": "/assets/textures/hdri/studio.hdr"
+  },
+  {
+    "preset": "sunset",
+    "label": "Sunset (Venice)",
+    "file": "/assets/textures/hdri/sunset.hdr"
+  },
+  {
+    "preset": "warehouse",
+    "label": "Warehouse",
+    "file": "/assets/textures/hdri/warehouse.hdr"
+  }
+]

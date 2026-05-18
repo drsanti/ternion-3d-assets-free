@@ -1,0 +1,13 @@
+{
+  "marker": "trn-feed-registry",
+  "version": 1,
+  "feeds": [
+    {
+      "id": "ternion-official",
+      "label": "TRN Official",
+      "feedUrl": "https://raw.githubusercontent.com/drsanti/ternion-3d-assets-free/main/assets/feed.json",
+      "lastSyncedRevision": "2026-05-16T20:00:00Z",
+      "lastSyncedAt": "2026-05-18T06:53:12.477Z"
+    }
+  ]
+}
