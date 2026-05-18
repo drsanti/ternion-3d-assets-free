@@ -1,0 +1,24 @@
+{
+  "marker": "trn-asset-feed",
+  "version": 1,
+  "id": "ternion-official",
+  "label": "TRN Official Assets",
+  "revision": "2026-05-16",
+  "baseUrl": "https://raw.githubusercontent.com/drsanti/ternion-3d-assets-free/main",
+  "libraries": {
+    "scene": {
+      "manifest": "assets/models/manifest.json",
+      "cacheRoot": "models"
+    },
+    "texture": {
+      "cubemap": {
+        "manifest": "assets/textures/cubemap/manifest.json",
+        "cacheRoot": "textures/cubemap"
+      }
+    },
+    "nodeGraph": {
+      "manifest": "assets/libraries/node-graph/index.json",
+      "cacheRoot": "libraries/node-graph"
+    }
+  }
+}
