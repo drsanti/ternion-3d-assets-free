@@ -3,7 +3,7 @@
   "version": 1,
   "id": "ternion-official",
   "label": "TRN Official Assets",
-  "revision": "2026-05-16T20:00:00Z",
+  "revision": "2026-05-19T12:00:00Z",
   "baseUrl": "https://raw.githubusercontent.com/drsanti/ternion-3d-assets-free/main",
   "libraries": {
     "scene": {
@@ -14,6 +14,10 @@
       "cubemap": {
         "manifest": "assets/textures/cubemap/manifest.json",
         "cacheRoot": "textures/cubemap"
+      },
+      "images": {
+        "manifest": "assets/textures/images/manifest.json",
+        "cacheRoot": "textures/images"
       }
     },
     "nodeGraph": {

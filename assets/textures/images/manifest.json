@@ -1,0 +1,67 @@
+{
+  "marker": "trn-library-index",
+  "version": 1,
+  "libraryId": "texture",
+  "entries": [
+    {
+      "id": "metal-metal-122m",
+      "name": "Metal 122M",
+      "category": "metal",
+      "file": "metal/Texturelabs_Metal_122M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    },
+    {
+      "id": "metal-metal-126m",
+      "name": "Metal 126M",
+      "category": "metal",
+      "file": "metal/Texturelabs_Metal_126M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    },
+    {
+      "id": "soil-soil-124m",
+      "name": "Soil 124M",
+      "category": "soil",
+      "file": "soil/Texturelabs_Soil_124M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    },
+    {
+      "id": "soil-soil-140m",
+      "name": "Soil 140M",
+      "category": "soil",
+      "file": "soil/Texturelabs_Soil_140M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    },
+    {
+      "id": "stone-stone-138m",
+      "name": "Stone 138M",
+      "category": "stone",
+      "file": "stone/Texturelabs_Stone_138M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    },
+    {
+      "id": "wood-wood-169m",
+      "name": "Wood 169M",
+      "category": "wood",
+      "file": "wood/Texturelabs_Wood_169M.jpg",
+      "tags": [
+        "albedo",
+        "pbr"
+      ]
+    }
+  ]
+}
