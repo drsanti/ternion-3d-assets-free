@@ -34,6 +34,20 @@ ternion-3d-assets-free/
         └── node-graph/
 ```
 
+### Sensor Studio — MediaPipe vision pack (Bitstream)
+
+```text
+assets/vision/mediapipe/
+  manifest.v1.json
+  wasm/
+  *.task / *.tflite
+```
+
+- Local after Free Loader: `globalStorage/.../assets/free/vision/mediapipe/...`
+- Bitstream relative path: `vision/mediapipe/...` (no `assets/` prefix in manifest keys)
+- Maintainer staging: Bitstream `npm run vision:stage-free-pack` → commit in this repo
+- See Bitstream **`extension/docs/VISION_MEDIAPIPE_FREE_PACK.md`**
+
 ## How consumers resolve paths
 
 ### Bitstream Studio
