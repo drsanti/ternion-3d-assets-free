@@ -1,7 +1,11 @@
 [
   "abb-robot-arm",
+  "car_colliders",
   "car-cam-physics",
+  "cattle",
+  "dev-kit",
   "healtcare-gateway",
+  "healtcare-gateway2",
   "plc-traninig-kit",
   "psoc-e84-ai",
   "psoc-e84-ai-board",

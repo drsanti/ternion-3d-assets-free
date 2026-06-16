@@ -1,0 +1,534 @@
+{
+  "marker": "trn-flow-preset",
+  "version": 1,
+  "meta": {
+    "id": "official-audio-oscillator-tone",
+    "name": "Audio oscillator tone",
+    "description": "Oscillator → Audio Scope + Audio Output (wired Audio bus). Sweep 220–880 Hz is on by default. Enable the output engine, then toggle Gate for a safe test tone.",
+    "tags": [
+      "official",
+      "demo-template",
+      "audio-oscillator-tone"
+    ],
+    "category": "audio",
+    "presetKind": "flowFull",
+    "activeGraphId": "__root__",
+    "sourceScopeId": "official:audio-oscillator-tone",
+    "createdAt": "2026-06-07T09:38:56.226Z",
+    "updatedAt": "2026-06-07T09:38:56.226Z"
+  },
+  "document": {
+    "version": 1,
+    "nodes": [
+      {
+        "id": "demo-osc",
+        "type": "studio",
+        "position": {
+          "x": 72,
+          "y": 200
+        },
+        "data": {
+          "label": "Oscillator (sweep)",
+          "category": "audio",
+          "nodeId": "audio-oscillator",
+          "defaultConfig": {
+            "waveform": "sine",
+            "detuneCents": 0,
+            "freqHz": 440,
+            "sweepEnabled": true,
+            "sweepStartHz": 220,
+            "sweepEndHz": 880,
+            "sweepPeriodS": 4,
+            "sweepCurve": "linear",
+            "sweepDirection": "up-down",
+            "sweepMode": "loop",
+            "gain": 0.05,
+            "gate": false
+          },
+          "outputHandles": [
+            {
+              "id": "level",
+              "portType": "number",
+              "label": "Level"
+            },
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "freqHz",
+              "portType": "number",
+              "label": "Freq (Hz)"
+            },
+            {
+              "id": "gain",
+              "portType": "number",
+              "label": "Gain"
+            },
+            {
+              "id": "gate",
+              "portType": "boolean",
+              "label": "Gate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 303
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z",
+          "liveNumberByHandle": {
+            "level": 0
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "measured": {
+          "width": 220,
+          "height": 304
+        },
+        "width": 220,
+        "height": 304,
+        "style": {
+          "width": 220,
+          "height": 304
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-scope",
+        "type": "studio",
+        "position": {
+          "x": 418.67510378328984,
+          "y": 114.44730163446448
+        },
+        "data": {
+          "label": "Audio Scope",
+          "category": "audio",
+          "nodeId": "audio-scope",
+          "defaultConfig": {
+            "monitorModeEnabled": false,
+            "sourceMode": "node",
+            "sourceNodeId": "demo-osc",
+            "mode": "waveform",
+            "fps": 30,
+            "fftSize": 2048,
+            "smoothing": 0.8,
+            "enabled": true,
+            "themePreset": "studio-cyan",
+            "plotBackgroundHex": "#09090b",
+            "waveformColorHex": "#22d3ee",
+            "spectrumColorHex": "#22d3ee",
+            "waveformLineWidthPx": 1.5,
+            "waveformStrokeOpacity": 0.85,
+            "spectrumFillOpacity": 0.45,
+            "waveformGain": 1,
+            "spectrumGain": 1,
+            "showGrid": true,
+            "showCenterLine": true,
+            "showFrame": true,
+            "timeDivisions": 8,
+            "freqBarCount": 64
+          },
+          "inputHandles": [
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            },
+            {
+              "id": "enabled",
+              "portType": "boolean",
+              "label": "Enabled"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": false,
+            "minWidth": 280,
+            "minHeight": 168,
+            "layoutWidthByChrome": {
+              "all": 280
+            },
+            "contentMinWidth": 280,
+            "contentMinHeight": 307
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 280,
+        "height": 308,
+        "style": {
+          "width": 280,
+          "height": 308
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-out",
+        "type": "studio",
+        "position": {
+          "x": 425.3858021922155,
+          "y": 471.48676970819787
+        },
+        "data": {
+          "label": "Audio Output",
+          "category": "audio",
+          "nodeId": "audio-output",
+          "defaultConfig": {
+            "enabled": false,
+            "monitorModeEnabled": false,
+            "sourceMode": "node",
+            "sourceNodeId": "demo-osc",
+            "limiterEnabled": true,
+            "maxGain": 0.25,
+            "requiresUserGesture": true,
+            "gain": 0.15,
+            "gate": false
+          },
+          "inputHandles": [
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            },
+            {
+              "id": "gain",
+              "portType": "number",
+              "label": "Gain"
+            },
+            {
+              "id": "gate",
+              "portType": "boolean",
+              "label": "Gate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 223
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "measured": {
+          "width": 220,
+          "height": 224
+        },
+        "width": 220,
+        "height": 224,
+        "style": {
+          "width": 220,
+          "height": 224
+        },
+        "selected": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "demo-osc-e1",
+        "source": "demo-osc",
+        "target": "demo-osc-scope",
+        "sourceHandle": "audio",
+        "targetHandle": "audio",
+        "animated": true,
+        "label": "audioBus",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-e2",
+        "source": "demo-osc",
+        "target": "demo-osc-out",
+        "sourceHandle": "audio",
+        "targetHandle": "audio",
+        "animated": true,
+        "label": "audioBus",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ],
+    "rootNodes": [
+      {
+        "id": "demo-osc",
+        "type": "studio",
+        "position": {
+          "x": 72,
+          "y": 200
+        },
+        "data": {
+          "label": "Oscillator (sweep)",
+          "category": "audio",
+          "nodeId": "audio-oscillator",
+          "defaultConfig": {
+            "waveform": "sine",
+            "detuneCents": 0,
+            "freqHz": 440,
+            "sweepEnabled": true,
+            "sweepStartHz": 220,
+            "sweepEndHz": 880,
+            "sweepPeriodS": 4,
+            "sweepCurve": "linear",
+            "sweepDirection": "up-down",
+            "sweepMode": "loop",
+            "gain": 0.05,
+            "gate": false
+          },
+          "outputHandles": [
+            {
+              "id": "level",
+              "portType": "number",
+              "label": "Level"
+            },
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "freqHz",
+              "portType": "number",
+              "label": "Freq (Hz)"
+            },
+            {
+              "id": "gain",
+              "portType": "number",
+              "label": "Gain"
+            },
+            {
+              "id": "gate",
+              "portType": "boolean",
+              "label": "Gate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 303
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z",
+          "liveNumberByHandle": {
+            "level": 0
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "measured": {
+          "width": 220,
+          "height": 304
+        },
+        "width": 220,
+        "height": 304,
+        "style": {
+          "width": 220,
+          "height": 304
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-scope",
+        "type": "studio",
+        "position": {
+          "x": 418.67510378328984,
+          "y": 114.44730163446448
+        },
+        "data": {
+          "label": "Audio Scope",
+          "category": "audio",
+          "nodeId": "audio-scope",
+          "defaultConfig": {
+            "monitorModeEnabled": false,
+            "sourceMode": "node",
+            "sourceNodeId": "demo-osc",
+            "mode": "waveform",
+            "fps": 30,
+            "fftSize": 2048,
+            "smoothing": 0.8,
+            "enabled": true,
+            "themePreset": "studio-cyan",
+            "plotBackgroundHex": "#09090b",
+            "waveformColorHex": "#22d3ee",
+            "spectrumColorHex": "#22d3ee",
+            "waveformLineWidthPx": 1.5,
+            "waveformStrokeOpacity": 0.85,
+            "spectrumFillOpacity": 0.45,
+            "waveformGain": 1,
+            "spectrumGain": 1,
+            "showGrid": true,
+            "showCenterLine": true,
+            "showFrame": true,
+            "timeDivisions": 8,
+            "freqBarCount": 64
+          },
+          "inputHandles": [
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            },
+            {
+              "id": "enabled",
+              "portType": "boolean",
+              "label": "Enabled"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": false,
+            "minWidth": 280,
+            "minHeight": 168,
+            "layoutWidthByChrome": {
+              "all": 280
+            },
+            "contentMinWidth": 280,
+            "contentMinHeight": 307
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 280,
+        "height": 308,
+        "style": {
+          "width": 280,
+          "height": 308
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-out",
+        "type": "studio",
+        "position": {
+          "x": 425.3858021922155,
+          "y": 471.48676970819787
+        },
+        "data": {
+          "label": "Audio Output",
+          "category": "audio",
+          "nodeId": "audio-output",
+          "defaultConfig": {
+            "enabled": false,
+            "monitorModeEnabled": false,
+            "sourceMode": "node",
+            "sourceNodeId": "demo-osc",
+            "limiterEnabled": true,
+            "maxGain": 0.25,
+            "requiresUserGesture": true,
+            "gain": 0.15,
+            "gate": false
+          },
+          "inputHandles": [
+            {
+              "id": "audio",
+              "portType": "audioBus",
+              "label": "Audio"
+            },
+            {
+              "id": "gain",
+              "portType": "number",
+              "label": "Gain"
+            },
+            {
+              "id": "gate",
+              "portType": "boolean",
+              "label": "Gate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 223
+          },
+          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "measured": {
+          "width": 220,
+          "height": 224
+        },
+        "width": 220,
+        "height": 224,
+        "style": {
+          "width": 220,
+          "height": 224
+        },
+        "selected": false
+      }
+    ],
+    "rootEdges": [
+      {
+        "id": "demo-osc-e1",
+        "source": "demo-osc",
+        "target": "demo-osc-scope",
+        "sourceHandle": "audio",
+        "targetHandle": "audio",
+        "animated": true,
+        "label": "audioBus",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-osc-e2",
+        "source": "demo-osc",
+        "target": "demo-osc-out",
+        "sourceHandle": "audio",
+        "targetHandle": "audio",
+        "animated": true,
+        "label": "audioBus",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ]
+  },
+  "dependencies": {
+    "modelUrls": [],
+    "dataChannels": [],
+    "hdriPresets": []
+  }
+}
