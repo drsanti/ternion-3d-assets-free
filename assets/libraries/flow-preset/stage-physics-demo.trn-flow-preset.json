@@ -2,49 +2,56 @@
   "marker": "trn-flow-preset",
   "version": 1,
   "meta": {
-    "id": "official-part-spin-demo",
-    "name": "Part spin demo",
-    "description": "Model Source (**TESA drone**) → **Model Viewer** with two **Part Spin** nodes (auto-bind first rotor parts). Sine → Map Range → spin A speed.",
+    "id": "official-stage-physics-demo",
+    "name": "Stage physics (Rapier)",
+    "description": "**Physics World** with floor **Box Collider** + dynamic **Rigid Body** wired to **Scene Output** **Physics**. Open **Stage** — Rapier preview shows colliders and a falling box.",
     "tags": [
       "official",
       "demo-template",
-      "part-spin-demo"
+      "stage-physics-demo"
     ],
-    "category": "animation",
+    "category": "stage",
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
-    "sourceScopeId": "official:part-spin-demo",
-    "createdAt": "2026-06-16T08:31:00.781Z",
-    "updatedAt": "2026-06-16T08:31:00.781Z"
+    "sourceScopeId": "official:stage-physics-demo",
+    "createdAt": "2026-06-16T08:31:00.729Z",
+    "updatedAt": "2026-06-16T08:31:00.729Z"
   },
   "document": {
     "version": 1,
     "nodes": [
       {
-        "id": "demo-model-select",
+        "id": "demo-phys-world",
         "type": "studio",
         "position": {
-          "x": 72,
-          "y": 480
+          "x": 80,
+          "y": 120
         },
         "data": {
-          "label": "Model Source (TESA drone)",
-          "category": "scene",
-          "nodeId": "model-select",
+          "label": "Physics World",
+          "category": "utility",
+          "nodeId": "physics-world",
           "defaultConfig": {
-            "selectedStudioAssetId": "model.tesa-drone",
-            "selectedModelUrl": "models/tesa-drone/tesa-drone.glb",
-            "generatedChildNodeIds": [
-              "demo-model-viewer",
-              "demo-part-spin-a",
-              "demo-part-spin-b"
-            ]
+            "enabled": true,
+            "gravityY": -9.81
           },
           "outputHandles": [
             {
               "id": "out",
-              "portType": "string",
-              "label": "Model"
+              "portType": "physicsScene",
+              "label": "Scene"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "shapes",
+              "portType": "physicsCollider",
+              "label": "Shapes"
+            },
+            {
+              "id": "bodies",
+              "portType": "physicsBody",
+              "label": "Bodies"
             }
           ],
           "liveValue": null,
@@ -53,27 +60,260 @@
           "ui": {
             "resizable": false,
             "allowBodyCollapse": true,
-            "minWidth": 208,
-            "minHeight": 88
+            "minWidth": 170,
+            "minHeight": 64
           }
         },
         "dragHandle": ".studio-node-drag-handle",
         "selected": false
       },
       {
-        "id": "demo-model-viewer",
+        "id": "demo-phys-floor",
         "type": "studio",
         "position": {
-          "x": 720,
-          "y": 280
+          "x": 80,
+          "y": 300
         },
         "data": {
-          "label": "Model Viewer (part spin)",
-          "category": "scene",
-          "nodeId": "model-viewer",
+          "label": "Floor collider",
+          "category": "utility",
+          "nodeId": "box-collider",
           "defaultConfig": {
-            "showGrid": true,
-            "fallbackModelUrl": "",
+            "positionX": 0,
+            "positionY": 0,
+            "positionZ": 0,
+            "rotationDegX": 0,
+            "rotationDegY": 0,
+            "rotationDegZ": 0,
+            "halfExtentsX": 4,
+            "halfExtentsY": 0.25,
+            "halfExtentsZ": 4
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsCollider",
+              "label": "Shape"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-body-a",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 480
+        },
+        "data": {
+          "label": "Hinge body A",
+          "category": "utility",
+          "nodeId": "rigid-body",
+          "defaultConfig": {
+            "mass": 1,
+            "friction": 0.5,
+            "restitution": 0.3,
+            "positionX": -0.6,
+            "positionY": 3,
+            "positionZ": 0,
+            "halfExtents": 0.3
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsBody",
+              "label": "Body"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "mesh",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-body-b",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 620
+        },
+        "data": {
+          "label": "Hinge body B",
+          "category": "utility",
+          "nodeId": "rigid-body",
+          "defaultConfig": {
+            "mass": 1,
+            "friction": 0.5,
+            "restitution": 0.3,
+            "positionX": 0.6,
+            "positionY": 3,
+            "positionZ": 0,
+            "halfExtents": 0.3
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsBody",
+              "label": "Body"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "mesh",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-hinge",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 760
+        },
+        "data": {
+          "label": "Hinge",
+          "category": "utility",
+          "nodeId": "hinge-joint",
+          "defaultConfig": {
+            "axis": "y"
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsJoint",
+              "label": "Joint"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "bodyA",
+              "portType": "physicsBody",
+              "label": "Body A"
+            },
+            {
+              "id": "bodyB",
+              "portType": "physicsBody",
+              "label": "Body B"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-spawner",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 900
+        },
+        "data": {
+          "label": "Rain spawner",
+          "category": "utility",
+          "nodeId": "object-spawner",
+          "defaultConfig": {
+            "rate": 0.8,
+            "maxCount": 6,
+            "spawnPositionX": 0,
+            "spawnPositionY": 5,
+            "spawnPositionZ": 0,
+            "halfExtents": 0.2,
+            "mass": 1
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsSpawner",
+              "label": "Spawner"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "trigger",
+              "portType": "number",
+              "label": "Trigger"
+            },
+            {
+              "id": "rate",
+              "portType": "number",
+              "label": "Rate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-scene-out",
+        "type": "studio",
+        "position": {
+          "x": 520,
+          "y": 240
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
             "scene3d": {
               "version": 1,
               "model": {
@@ -99,6 +339,7 @@
               },
               "environment": {
                 "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
                 "showBackgroundTexture": true,
                 "useCubemapIbl": true,
                 "iblStrength": 1,
@@ -253,14 +494,13 @@
                 "enabled": false,
                 "gravityY": -9.81
               }
-            },
-            "sourceModelNodeId": "demo-model-select"
+            }
           },
           "inputHandles": [
             {
-              "id": "in",
+              "id": "models",
               "portType": "string",
-              "label": "Model"
+              "label": "Models"
             },
             {
               "id": "meshes",
@@ -328,220 +568,9 @@
           "livePlotHistory": {},
           "ui": {
             "resizable": true,
-            "allowBodyCollapse": false,
-            "minWidth": 280,
-            "minHeight": 200
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-part-spin-a",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 280
-        },
-        "data": {
-          "label": "Part Spin A",
-          "category": "scene",
-          "nodeId": "part-spin",
-          "defaultConfig": {
-            "spinAxis": "y",
-            "speedRadS": 12.566370614359172,
-            "reverse": false,
-            "enabled": true,
-            "sourceModelNodeId": "demo-model-select"
-          },
-          "inputHandles": [
-            {
-              "id": "speed",
-              "portType": "number",
-              "label": "Speed (rad/s)"
-            },
-            {
-              "id": "enabled",
-              "portType": "boolean",
-              "label": "Enabled"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
             "allowBodyCollapse": true,
-            "minWidth": 200,
-            "minHeight": 120
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-part-spin-b",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 400
-        },
-        "data": {
-          "label": "Part Spin B",
-          "category": "scene",
-          "nodeId": "part-spin",
-          "defaultConfig": {
-            "spinAxis": "y",
-            "speedRadS": 6.283185307179586,
-            "reverse": true,
-            "enabled": true,
-            "sourceModelNodeId": "demo-model-select"
-          },
-          "inputHandles": [
-            {
-              "id": "speed",
-              "portType": "number",
-              "label": "Speed (rad/s)"
-            },
-            {
-              "id": "enabled",
-              "portType": "boolean",
-              "label": "Enabled"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 200,
-            "minHeight": 120
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-spin-sine",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 120
-        },
-        "data": {
-          "label": "Speed driver (sine)",
-          "category": "generator",
-          "nodeId": "sine-wave",
-          "defaultConfig": {
-            "frequency": 0.08,
-            "amplitude": 3,
-            "offset": 4,
-            "phase": 0
-          },
-          "outputHandles": [
-            {
-              "id": "out",
-              "portType": "number",
-              "label": "Out"
-            }
-          ],
-          "inputHandles": [
-            {
-              "id": "amplitude",
-              "portType": "number",
-              "label": "Amplitude"
-            },
-            {
-              "id": "frequency",
-              "portType": "number",
-              "label": "Frequency"
-            },
-            {
-              "id": "phase",
-              "portType": "number",
-              "label": "Phase"
-            },
-            {
-              "id": "offset",
-              "portType": "number",
-              "label": "Offset"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 170,
-            "minHeight": 64
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-spin-map",
-        "type": "studio",
-        "position": {
-          "x": 280,
-          "y": 120
-        },
-        "data": {
-          "label": "Map to rad/s",
-          "category": "transform",
-          "nodeId": "map-range",
-          "defaultConfig": {
-            "value": 0,
-            "inMin": 1,
-            "inMax": 7,
-            "outMin": 0.5,
-            "outMax": 12,
-            "clamp": true
-          },
-          "outputHandles": [
-            {
-              "id": "out",
-              "portType": "number",
-              "label": "Out"
-            }
-          ],
-          "inputHandles": [
-            {
-              "id": "value",
-              "portType": "number",
-              "label": "Value"
-            },
-            {
-              "id": "inMin",
-              "portType": "number",
-              "label": "From min"
-            },
-            {
-              "id": "inMax",
-              "portType": "number",
-              "label": "From max"
-            },
-            {
-              "id": "outMin",
-              "portType": "number",
-              "label": "To min"
-            },
-            {
-              "id": "outMax",
-              "portType": "number",
-              "label": "To max"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 170,
-            "minHeight": 64
+            "minWidth": 185,
+            "minHeight": 72
           }
         },
         "dragHandle": ".studio-node-drag-handle",
@@ -550,39 +579,78 @@
     ],
     "edges": [
       {
-        "id": "demo-part-spin-e1",
-        "source": "demo-model-select",
-        "target": "demo-model-viewer",
+        "id": "demo-phys-e1",
+        "source": "demo-phys-floor",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "in",
+        "targetHandle": "shapes",
         "animated": true,
-        "label": "string",
+        "label": "physicsCollider",
         "style": {
           "strokeWidth": 2
         },
         "selected": false
       },
       {
-        "id": "demo-part-spin-e2",
-        "source": "demo-spin-sine",
-        "target": "demo-spin-map",
+        "id": "demo-phys-e2a",
+        "source": "demo-phys-body-a",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "value",
+        "targetHandle": "bodies",
         "animated": true,
-        "label": "number",
+        "label": "physicsBody",
         "style": {
           "strokeWidth": 2
         },
         "selected": false
       },
       {
-        "id": "demo-part-spin-e3",
-        "source": "demo-spin-map",
-        "target": "demo-part-spin-a",
+        "id": "demo-phys-e2b",
+        "source": "demo-phys-body-b",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "speed",
+        "targetHandle": "bodies",
         "animated": true,
-        "label": "number",
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e3",
+        "source": "demo-phys-body-a",
+        "target": "demo-phys-hinge",
+        "sourceHandle": "out",
+        "targetHandle": "bodyA",
+        "animated": true,
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e4",
+        "source": "demo-phys-body-b",
+        "target": "demo-phys-hinge",
+        "sourceHandle": "out",
+        "targetHandle": "bodyB",
+        "animated": true,
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e5",
+        "source": "demo-phys-world",
+        "target": "demo-phys-scene-out",
+        "sourceHandle": "out",
+        "targetHandle": "phys",
+        "animated": true,
+        "label": "physicsScene",
         "style": {
           "strokeWidth": 2
         },
@@ -591,30 +659,37 @@
     ],
     "rootNodes": [
       {
-        "id": "demo-model-select",
+        "id": "demo-phys-world",
         "type": "studio",
         "position": {
-          "x": 72,
-          "y": 480
+          "x": 80,
+          "y": 120
         },
         "data": {
-          "label": "Model Source (TESA drone)",
-          "category": "scene",
-          "nodeId": "model-select",
+          "label": "Physics World",
+          "category": "utility",
+          "nodeId": "physics-world",
           "defaultConfig": {
-            "selectedStudioAssetId": "model.tesa-drone",
-            "selectedModelUrl": "models/tesa-drone/tesa-drone.glb",
-            "generatedChildNodeIds": [
-              "demo-model-viewer",
-              "demo-part-spin-a",
-              "demo-part-spin-b"
-            ]
+            "enabled": true,
+            "gravityY": -9.81
           },
           "outputHandles": [
             {
               "id": "out",
-              "portType": "string",
-              "label": "Model"
+              "portType": "physicsScene",
+              "label": "Scene"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "shapes",
+              "portType": "physicsCollider",
+              "label": "Shapes"
+            },
+            {
+              "id": "bodies",
+              "portType": "physicsBody",
+              "label": "Bodies"
             }
           ],
           "liveValue": null,
@@ -623,27 +698,260 @@
           "ui": {
             "resizable": false,
             "allowBodyCollapse": true,
-            "minWidth": 208,
-            "minHeight": 88
+            "minWidth": 170,
+            "minHeight": 64
           }
         },
         "dragHandle": ".studio-node-drag-handle",
         "selected": false
       },
       {
-        "id": "demo-model-viewer",
+        "id": "demo-phys-floor",
         "type": "studio",
         "position": {
-          "x": 720,
-          "y": 280
+          "x": 80,
+          "y": 300
         },
         "data": {
-          "label": "Model Viewer (part spin)",
-          "category": "scene",
-          "nodeId": "model-viewer",
+          "label": "Floor collider",
+          "category": "utility",
+          "nodeId": "box-collider",
           "defaultConfig": {
-            "showGrid": true,
-            "fallbackModelUrl": "",
+            "positionX": 0,
+            "positionY": 0,
+            "positionZ": 0,
+            "rotationDegX": 0,
+            "rotationDegY": 0,
+            "rotationDegZ": 0,
+            "halfExtentsX": 4,
+            "halfExtentsY": 0.25,
+            "halfExtentsZ": 4
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsCollider",
+              "label": "Shape"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-body-a",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 480
+        },
+        "data": {
+          "label": "Hinge body A",
+          "category": "utility",
+          "nodeId": "rigid-body",
+          "defaultConfig": {
+            "mass": 1,
+            "friction": 0.5,
+            "restitution": 0.3,
+            "positionX": -0.6,
+            "positionY": 3,
+            "positionZ": 0,
+            "halfExtents": 0.3
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsBody",
+              "label": "Body"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "mesh",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-body-b",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 620
+        },
+        "data": {
+          "label": "Hinge body B",
+          "category": "utility",
+          "nodeId": "rigid-body",
+          "defaultConfig": {
+            "mass": 1,
+            "friction": 0.5,
+            "restitution": 0.3,
+            "positionX": 0.6,
+            "positionY": 3,
+            "positionZ": 0,
+            "halfExtents": 0.3
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsBody",
+              "label": "Body"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "mesh",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-hinge",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 760
+        },
+        "data": {
+          "label": "Hinge",
+          "category": "utility",
+          "nodeId": "hinge-joint",
+          "defaultConfig": {
+            "axis": "y"
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsJoint",
+              "label": "Joint"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "bodyA",
+              "portType": "physicsBody",
+              "label": "Body A"
+            },
+            {
+              "id": "bodyB",
+              "portType": "physicsBody",
+              "label": "Body B"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-spawner",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 900
+        },
+        "data": {
+          "label": "Rain spawner",
+          "category": "utility",
+          "nodeId": "object-spawner",
+          "defaultConfig": {
+            "rate": 0.8,
+            "maxCount": 6,
+            "spawnPositionX": 0,
+            "spawnPositionY": 5,
+            "spawnPositionZ": 0,
+            "halfExtents": 0.2,
+            "mass": 1
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "physicsSpawner",
+              "label": "Spawner"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "trigger",
+              "portType": "number",
+              "label": "Trigger"
+            },
+            {
+              "id": "rate",
+              "portType": "number",
+              "label": "Rate"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-phys-scene-out",
+        "type": "studio",
+        "position": {
+          "x": 520,
+          "y": 240
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
             "scene3d": {
               "version": 1,
               "model": {
@@ -669,6 +977,7 @@
               },
               "environment": {
                 "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
                 "showBackgroundTexture": true,
                 "useCubemapIbl": true,
                 "iblStrength": 1,
@@ -823,14 +1132,13 @@
                 "enabled": false,
                 "gravityY": -9.81
               }
-            },
-            "sourceModelNodeId": "demo-model-select"
+            }
           },
           "inputHandles": [
             {
-              "id": "in",
+              "id": "models",
               "portType": "string",
-              "label": "Model"
+              "label": "Models"
             },
             {
               "id": "meshes",
@@ -898,220 +1206,9 @@
           "livePlotHistory": {},
           "ui": {
             "resizable": true,
-            "allowBodyCollapse": false,
-            "minWidth": 280,
-            "minHeight": 200
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-part-spin-a",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 280
-        },
-        "data": {
-          "label": "Part Spin A",
-          "category": "scene",
-          "nodeId": "part-spin",
-          "defaultConfig": {
-            "spinAxis": "y",
-            "speedRadS": 12.566370614359172,
-            "reverse": false,
-            "enabled": true,
-            "sourceModelNodeId": "demo-model-select"
-          },
-          "inputHandles": [
-            {
-              "id": "speed",
-              "portType": "number",
-              "label": "Speed (rad/s)"
-            },
-            {
-              "id": "enabled",
-              "portType": "boolean",
-              "label": "Enabled"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
             "allowBodyCollapse": true,
-            "minWidth": 200,
-            "minHeight": 120
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-part-spin-b",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 400
-        },
-        "data": {
-          "label": "Part Spin B",
-          "category": "scene",
-          "nodeId": "part-spin",
-          "defaultConfig": {
-            "spinAxis": "y",
-            "speedRadS": 6.283185307179586,
-            "reverse": true,
-            "enabled": true,
-            "sourceModelNodeId": "demo-model-select"
-          },
-          "inputHandles": [
-            {
-              "id": "speed",
-              "portType": "number",
-              "label": "Speed (rad/s)"
-            },
-            {
-              "id": "enabled",
-              "portType": "boolean",
-              "label": "Enabled"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 200,
-            "minHeight": 120
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-spin-sine",
-        "type": "studio",
-        "position": {
-          "x": 72,
-          "y": 120
-        },
-        "data": {
-          "label": "Speed driver (sine)",
-          "category": "generator",
-          "nodeId": "sine-wave",
-          "defaultConfig": {
-            "frequency": 0.08,
-            "amplitude": 3,
-            "offset": 4,
-            "phase": 0
-          },
-          "outputHandles": [
-            {
-              "id": "out",
-              "portType": "number",
-              "label": "Out"
-            }
-          ],
-          "inputHandles": [
-            {
-              "id": "amplitude",
-              "portType": "number",
-              "label": "Amplitude"
-            },
-            {
-              "id": "frequency",
-              "portType": "number",
-              "label": "Frequency"
-            },
-            {
-              "id": "phase",
-              "portType": "number",
-              "label": "Phase"
-            },
-            {
-              "id": "offset",
-              "portType": "number",
-              "label": "Offset"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 170,
-            "minHeight": 64
-          }
-        },
-        "dragHandle": ".studio-node-drag-handle",
-        "selected": false
-      },
-      {
-        "id": "demo-spin-map",
-        "type": "studio",
-        "position": {
-          "x": 280,
-          "y": 120
-        },
-        "data": {
-          "label": "Map to rad/s",
-          "category": "transform",
-          "nodeId": "map-range",
-          "defaultConfig": {
-            "value": 0,
-            "inMin": 1,
-            "inMax": 7,
-            "outMin": 0.5,
-            "outMax": 12,
-            "clamp": true
-          },
-          "outputHandles": [
-            {
-              "id": "out",
-              "portType": "number",
-              "label": "Out"
-            }
-          ],
-          "inputHandles": [
-            {
-              "id": "value",
-              "portType": "number",
-              "label": "Value"
-            },
-            {
-              "id": "inMin",
-              "portType": "number",
-              "label": "From min"
-            },
-            {
-              "id": "inMax",
-              "portType": "number",
-              "label": "From max"
-            },
-            {
-              "id": "outMin",
-              "portType": "number",
-              "label": "To min"
-            },
-            {
-              "id": "outMax",
-              "portType": "number",
-              "label": "To max"
-            }
-          ],
-          "liveValue": null,
-          "liveHistory": [],
-          "livePlotHistory": {},
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 170,
-            "minHeight": 64
+            "minWidth": 185,
+            "minHeight": 72
           }
         },
         "dragHandle": ".studio-node-drag-handle",
@@ -1120,39 +1217,78 @@
     ],
     "rootEdges": [
       {
-        "id": "demo-part-spin-e1",
-        "source": "demo-model-select",
-        "target": "demo-model-viewer",
+        "id": "demo-phys-e1",
+        "source": "demo-phys-floor",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "in",
+        "targetHandle": "shapes",
         "animated": true,
-        "label": "string",
+        "label": "physicsCollider",
         "style": {
           "strokeWidth": 2
         },
         "selected": false
       },
       {
-        "id": "demo-part-spin-e2",
-        "source": "demo-spin-sine",
-        "target": "demo-spin-map",
+        "id": "demo-phys-e2a",
+        "source": "demo-phys-body-a",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "value",
+        "targetHandle": "bodies",
         "animated": true,
-        "label": "number",
+        "label": "physicsBody",
         "style": {
           "strokeWidth": 2
         },
         "selected": false
       },
       {
-        "id": "demo-part-spin-e3",
-        "source": "demo-spin-map",
-        "target": "demo-part-spin-a",
+        "id": "demo-phys-e2b",
+        "source": "demo-phys-body-b",
+        "target": "demo-phys-world",
         "sourceHandle": "out",
-        "targetHandle": "speed",
+        "targetHandle": "bodies",
         "animated": true,
-        "label": "number",
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e3",
+        "source": "demo-phys-body-a",
+        "target": "demo-phys-hinge",
+        "sourceHandle": "out",
+        "targetHandle": "bodyA",
+        "animated": true,
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e4",
+        "source": "demo-phys-body-b",
+        "target": "demo-phys-hinge",
+        "sourceHandle": "out",
+        "targetHandle": "bodyB",
+        "animated": true,
+        "label": "physicsBody",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-phys-e5",
+        "source": "demo-phys-world",
+        "target": "demo-phys-scene-out",
+        "sourceHandle": "out",
+        "targetHandle": "phys",
+        "animated": true,
+        "label": "physicsScene",
         "style": {
           "strokeWidth": 2
         },
@@ -1161,9 +1297,7 @@
     ]
   },
   "dependencies": {
-    "modelUrls": [
-      "models/tesa-drone/tesa-drone.glb"
-    ],
+    "modelUrls": [],
     "dataChannels": [],
     "hdriPresets": []
   }

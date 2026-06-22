@@ -14,8 +14,8 @@
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
     "sourceScopeId": "official:basic-indicator",
-    "createdAt": "2026-06-07T09:51:50.645Z",
-    "updatedAt": "2026-06-07T09:51:50.645Z"
+    "createdAt": "2026-06-16T08:31:00.785Z",
+    "updatedAt": "2026-06-16T08:31:00.785Z"
   },
   "document": {
     "version": 1,
@@ -67,7 +67,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {
@@ -108,7 +119,18 @@
           "category": "output",
           "nodeId": "indicator",
           "defaultConfig": {
-            "label": "Indicator"
+            "label": "Indicator",
+            "publishToDashboard": false,
+            "onLabel": "ON",
+            "offLabel": "OFF",
+            "onTone": "success",
+            "offTone": "neutral",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
           },
           "inputHandles": [
             {
@@ -207,7 +229,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {
@@ -248,7 +281,18 @@
           "category": "output",
           "nodeId": "indicator",
           "defaultConfig": {
-            "label": "Indicator"
+            "label": "Indicator",
+            "publishToDashboard": false,
+            "onLabel": "ON",
+            "offLabel": "OFF",
+            "onTone": "success",
+            "offTone": "neutral",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
           },
           "inputHandles": [
             {

@@ -51,11 +51,60 @@
       "description": "Camera Input → Video Texture + Vision Pose (wired Video bus). Enable the camera node and allow browser permission; pose outputs update when MediaPipe model loads."
     },
     {
+      "id": "official-dashboard-button-led",
+      "name": "Dashboard + button",
+      "category": "custom",
+      "file": "dashboard-button-led.trn-flow-preset.json",
+      "description": "Sine → **Dashboard Text**; **Dashboard Button** → Set Boolean → **Dashboard LED**; all widgets wired to **Dashboard Output**. Open the **Dashboard** workbench pane (or **Dashboard focus** layout preset)."
+    },
+    {
+      "id": "official-dashboard-controls-demo",
+      "name": "Dashboard controls",
+      "category": "custom",
+      "file": "dashboard-controls-demo.trn-flow-preset.json",
+      "description": "Full operator starter — **Switch**, **Slider**, text, gauge, button/LED, and published **Compare** status pill. Open **Dashboard** → **Edit** to drag grid placement and resize spans."
+    },
+    {
+      "id": "official-dashboard-publish-demo",
+      "name": "Dashboard publish",
+      "category": "custom",
+      "file": "dashboard-publish-demo.trn-flow-preset.json",
+      "description": "Sine → **Radial Gauge** + **Numeric Display** + **LED** with **Show on Dashboard** enabled (no Widget wires). Add **Dashboard Output** only — open **Dashboard** or **Operator** layout to preview."
+    },
+    {
+      "id": "official-dashboard-tabs-demo",
+      "name": "Dashboard tabs",
+      "category": "custom",
+      "file": "dashboard-tabs-demo.trn-flow-preset.json",
+      "description": "Two **Dashboard Tab** pages wired to **Tabs** on **Dashboard Output** — **Overview** (button + text) and **Trends** (published sparkline). Open **Dashboard** pane to switch tabs."
+    },
+    {
+      "id": "official-teaching-twin-demo",
+      "name": "Teaching 2D+3D",
+      "category": "custom",
+      "file": "teaching-twin-demo.trn-flow-preset.json",
+      "description": "Sine → **Dashboard Text** + **Gauge** and **Model Source** → **Scene Output** — one graph, two commit nodes. Apply **Teaching 2D+3D** desk (Dashboard toolbar) or **2D+3D** work mode; use **Stage objects** outliner for picks."
+    },
+    {
+      "id": "official-stage-physics-demo",
+      "name": "Stage physics (Rapier)",
+      "category": "stage",
+      "file": "stage-physics-demo.trn-flow-preset.json",
+      "description": "**Physics World** with floor **Box Collider** + dynamic **Rigid Body** wired to **Scene Output** **Physics**. Open **Stage** — Rapier preview shows colliders and a falling box."
+    },
+    {
       "id": "official-stage-scene-output",
       "name": "Stage + Scene Output",
       "category": "stage",
       "file": "stage-scene-output.trn-flow-preset.json",
       "description": "Model Source (PSoC E84 pack model) → **Scene Output** (+ optional **Environment**). Open the **Stage** workbench pane to preview the full viewport; use **Model Viewer** separately for in-graph authoring."
+    },
+    {
+      "id": "official-primitives-playground",
+      "name": "Primitives playground",
+      "category": "stage",
+      "file": "primitives-playground.trn-flow-preset.json",
+      "description": "Mesh materials + **Mesh Plane** floor + two **Mesh Sphere** nodes → Scene Output **Meshes** (+ **Environment**). Open **Stage** — no GLB required."
     },
     {
       "id": "official-stage-camera-vision",

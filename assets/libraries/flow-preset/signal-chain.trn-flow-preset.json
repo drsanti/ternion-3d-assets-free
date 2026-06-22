@@ -14,8 +14,8 @@
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
     "sourceScopeId": "official:signal-chain",
-    "createdAt": "2026-06-07T09:51:50.643Z",
-    "updatedAt": "2026-06-07T09:51:50.643Z"
+    "createdAt": "2026-06-16T08:31:00.784Z",
+    "updatedAt": "2026-06-16T08:31:00.784Z"
   },
   "document": {
     "version": 1,
@@ -108,7 +108,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {
@@ -149,7 +160,18 @@
           "category": "output",
           "nodeId": "indicator",
           "defaultConfig": {
-            "label": "Indicator"
+            "label": "Indicator",
+            "publishToDashboard": false,
+            "onLabel": "ON",
+            "offLabel": "OFF",
+            "onTone": "success",
+            "offTone": "neutral",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
           },
           "inputHandles": [
             {
@@ -205,7 +227,20 @@
                 "to": 100,
                 "color": "#f87171"
               }
-            ]
+            ],
+            "publishToDashboard": false,
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 4
+            },
+            "flex": {
+              "order": 1,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "120px"
+            }
           },
           "inputType": "number",
           "liveValue": null,
@@ -235,7 +270,20 @@
           "defaultConfig": {
             "historySize": 24,
             "strokeColor": "#22d3ee",
-            "strokeWidth": 3
+            "strokeWidth": 3,
+            "publishToDashboard": false,
+            "placement": {
+              "column": 1,
+              "row": 3,
+              "columnSpan": 6,
+              "rowSpan": 2
+            },
+            "flex": {
+              "order": 3,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
           },
           "inputHandles": [
             {
@@ -414,7 +462,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.5
+            "value": 0.5,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {
@@ -455,7 +514,18 @@
           "category": "output",
           "nodeId": "indicator",
           "defaultConfig": {
-            "label": "Indicator"
+            "label": "Indicator",
+            "publishToDashboard": false,
+            "onLabel": "ON",
+            "offLabel": "OFF",
+            "onTone": "success",
+            "offTone": "neutral",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
           },
           "inputHandles": [
             {
@@ -511,7 +581,20 @@
                 "to": 100,
                 "color": "#f87171"
               }
-            ]
+            ],
+            "publishToDashboard": false,
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 4
+            },
+            "flex": {
+              "order": 1,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "120px"
+            }
           },
           "inputType": "number",
           "liveValue": null,
@@ -541,7 +624,20 @@
           "defaultConfig": {
             "historySize": 24,
             "strokeColor": "#22d3ee",
-            "strokeWidth": 3
+            "strokeWidth": 3,
+            "publishToDashboard": false,
+            "placement": {
+              "column": 1,
+              "row": 3,
+              "columnSpan": 6,
+              "rowSpan": 2
+            },
+            "flex": {
+              "order": 3,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
           },
           "inputHandles": [
             {

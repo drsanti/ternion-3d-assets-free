@@ -14,8 +14,8 @@
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
     "sourceScopeId": "official:audio-machine-fault-lab",
-    "createdAt": "2026-06-07T09:51:50.598Z",
-    "updatedAt": "2026-06-07T09:51:50.598Z"
+    "createdAt": "2026-06-16T08:31:00.708Z",
+    "updatedAt": "2026-06-16T08:31:00.708Z"
   },
   "document": {
     "version": 1,
@@ -158,7 +158,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.88
+            "value": 0.88,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {
@@ -675,7 +686,18 @@
           "nodeId": "threshold",
           "defaultConfig": {
             "operator": ">",
-            "value": 0.88
+            "value": 0.88,
+            "publishToDashboard": false,
+            "onLabel": "OK",
+            "offLabel": "Alarm",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
           },
           "outputHandles": [
             {

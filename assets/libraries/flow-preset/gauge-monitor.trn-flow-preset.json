@@ -14,8 +14,8 @@
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
     "sourceScopeId": "official:gauge-monitor",
-    "createdAt": "2026-06-07T09:51:50.648Z",
-    "updatedAt": "2026-06-07T09:51:50.648Z"
+    "createdAt": "2026-06-16T08:31:00.787Z",
+    "updatedAt": "2026-06-16T08:31:00.787Z"
   },
   "document": {
     "version": 1,
@@ -88,7 +88,20 @@
                 "to": 100,
                 "color": "#f87171"
               }
-            ]
+            ],
+            "publishToDashboard": false,
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 4
+            },
+            "flex": {
+              "order": 1,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "120px"
+            }
           },
           "inputType": "number",
           "liveValue": null,
@@ -118,7 +131,20 @@
           "defaultConfig": {
             "historySize": 24,
             "strokeColor": "#22d3ee",
-            "strokeWidth": 3
+            "strokeWidth": 3,
+            "publishToDashboard": false,
+            "placement": {
+              "column": 1,
+              "row": 3,
+              "columnSpan": 6,
+              "rowSpan": 2
+            },
+            "flex": {
+              "order": 3,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
           },
           "inputHandles": [
             {
@@ -238,7 +264,20 @@
                 "to": 100,
                 "color": "#f87171"
               }
-            ]
+            ],
+            "publishToDashboard": false,
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 4
+            },
+            "flex": {
+              "order": 1,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "120px"
+            }
           },
           "inputType": "number",
           "liveValue": null,
@@ -268,7 +307,20 @@
           "defaultConfig": {
             "historySize": 24,
             "strokeColor": "#22d3ee",
-            "strokeWidth": 3
+            "strokeWidth": 3,
+            "publishToDashboard": false,
+            "placement": {
+              "column": 1,
+              "row": 3,
+              "columnSpan": 6,
+              "rowSpan": 2
+            },
+            "flex": {
+              "order": 3,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
           },
           "inputHandles": [
             {

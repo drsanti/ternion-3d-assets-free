@@ -1,0 +1,1060 @@
+{
+  "marker": "trn-flow-preset",
+  "version": 1,
+  "meta": {
+    "id": "official-dashboard-button-led",
+    "name": "Dashboard + button",
+    "description": "Sine → **Dashboard Text**; **Dashboard Button** → Set Boolean → **Dashboard LED**; all widgets wired to **Dashboard Output**. Open the **Dashboard** workbench pane (or **Dashboard focus** layout preset).",
+    "tags": [
+      "official",
+      "demo-template",
+      "dashboard-button-led"
+    ],
+    "category": "custom",
+    "presetKind": "flowFull",
+    "activeGraphId": "__root__",
+    "sourceScopeId": "official:dashboard-button-led",
+    "createdAt": "2026-06-16T08:31:00.712Z",
+    "updatedAt": "2026-06-16T08:31:00.712Z"
+  },
+  "document": {
+    "version": 1,
+    "nodes": [
+      {
+        "id": "demo-dash-sine",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 80
+        },
+        "data": {
+          "label": "Sine Wave",
+          "category": "generator",
+          "nodeId": "sine-wave",
+          "defaultConfig": {
+            "frequency": 1,
+            "amplitude": 1,
+            "offset": 0,
+            "phase": 0
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "amplitude",
+              "portType": "number",
+              "label": "Amplitude"
+            },
+            {
+              "id": "frequency",
+              "portType": "number",
+              "label": "Frequency"
+            },
+            {
+              "id": "phase",
+              "portType": "number",
+              "label": "Phase"
+            },
+            {
+              "id": "offset",
+              "portType": "number",
+              "label": "Offset"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-text",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 240
+        },
+        "data": {
+          "label": "RPM",
+          "category": "dashboard",
+          "nodeId": "dashboard-text",
+          "defaultConfig": {
+            "label": "Value",
+            "unit": "",
+            "decimals": 2,
+            "showStatusBar": true,
+            "placement": {
+              "column": 1,
+              "row": 2,
+              "columnSpan": 4,
+              "rowSpan": 1
+            },
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "rgba(228,228,231,0.95)"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ]
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-gauge",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 400
+        },
+        "data": {
+          "label": "Gauge",
+          "category": "dashboard",
+          "nodeId": "dashboard-gauge",
+          "defaultConfig": {
+            "min": 0,
+            "max": 100,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 4,
+              "rowSpan": 3
+            },
+            "flex": {
+              "order": 2,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "200px"
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-button",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 560
+        },
+        "data": {
+          "label": "Toggle LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-button",
+          "defaultConfig": {
+            "label": "Button",
+            "variant": "primary",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "event",
+              "label": "Click"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-set-bool",
+        "type": "studio",
+        "position": {
+          "x": 360,
+          "y": 560
+        },
+        "data": {
+          "label": "Set Boolean",
+          "category": "logic",
+          "nodeId": "event-set-boolean",
+          "defaultConfig": {
+            "setTo": true,
+            "value": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "event",
+              "label": "Trigger"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-led",
+        "type": "studio",
+        "position": {
+          "x": 620,
+          "y": 560
+        },
+        "data": {
+          "label": "Status LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-led",
+          "defaultConfig": {
+            "label": "LED",
+            "onColor": "#22c55e",
+            "offColor": "#18181b",
+            "threshold": 0.5,
+            "blink": false,
+            "placement": {
+              "column": 3,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "boolean",
+              "label": "On"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-output",
+        "type": "studio",
+        "position": {
+          "x": 900,
+          "y": 300
+        },
+        "data": {
+          "label": "Dashboard Output",
+          "category": "dashboard",
+          "nodeId": "dashboard-output",
+          "defaultConfig": {
+            "layout": {
+              "version": 1,
+              "mode": "grid",
+              "grid": {
+                "columns": 12,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "rowHeightPx": 48
+              },
+              "flex": {
+                "direction": "row",
+                "wrap": true,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "alignItems": "stretch",
+                "justifyContent": "start"
+              }
+            },
+            "theme": {
+              "version": 1,
+              "preset": "studio-dark",
+              "canvasBackground": "#09090b",
+              "panelBackground": "#18181b",
+              "accentColor": "#22d3ee",
+              "textPrimary": "#e4e4e7",
+              "textSecondary": "#a1a1aa"
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "widgets",
+              "portType": "dashboardWidget",
+              "label": "Widgets"
+            },
+            {
+              "id": "tabs",
+              "portType": "dashboardTab",
+              "label": "Tabs"
+            },
+            {
+              "id": "theme",
+              "portType": "dashboardTheme",
+              "label": "Theme"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "demo-dash-e1",
+        "source": "demo-dash-sine",
+        "target": "demo-dash-text",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "number",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e1b",
+        "source": "demo-dash-sine",
+        "target": "demo-dash-gauge",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "number",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e2",
+        "source": "demo-dash-text",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e2b",
+        "source": "demo-dash-gauge",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e3",
+        "source": "demo-dash-button",
+        "target": "demo-dash-set-bool",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "event",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e4",
+        "source": "demo-dash-set-bool",
+        "target": "demo-dash-led",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "boolean",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e5",
+        "source": "demo-dash-button",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e6",
+        "source": "demo-dash-led",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ],
+    "rootNodes": [
+      {
+        "id": "demo-dash-sine",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 80
+        },
+        "data": {
+          "label": "Sine Wave",
+          "category": "generator",
+          "nodeId": "sine-wave",
+          "defaultConfig": {
+            "frequency": 1,
+            "amplitude": 1,
+            "offset": 0,
+            "phase": 0
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "amplitude",
+              "portType": "number",
+              "label": "Amplitude"
+            },
+            {
+              "id": "frequency",
+              "portType": "number",
+              "label": "Frequency"
+            },
+            {
+              "id": "phase",
+              "portType": "number",
+              "label": "Phase"
+            },
+            {
+              "id": "offset",
+              "portType": "number",
+              "label": "Offset"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-text",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 240
+        },
+        "data": {
+          "label": "RPM",
+          "category": "dashboard",
+          "nodeId": "dashboard-text",
+          "defaultConfig": {
+            "label": "Value",
+            "unit": "",
+            "decimals": 2,
+            "showStatusBar": true,
+            "placement": {
+              "column": 1,
+              "row": 2,
+              "columnSpan": 4,
+              "rowSpan": 1
+            },
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "rgba(228,228,231,0.95)"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ]
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-gauge",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 400
+        },
+        "data": {
+          "label": "Gauge",
+          "category": "dashboard",
+          "nodeId": "dashboard-gauge",
+          "defaultConfig": {
+            "min": 0,
+            "max": 100,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 5,
+              "row": 1,
+              "columnSpan": 4,
+              "rowSpan": 3
+            },
+            "flex": {
+              "order": 2,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "200px"
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-button",
+        "type": "studio",
+        "position": {
+          "x": 80,
+          "y": 560
+        },
+        "data": {
+          "label": "Toggle LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-button",
+          "defaultConfig": {
+            "label": "Button",
+            "variant": "primary",
+            "placement": {
+              "column": 1,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "event",
+              "label": "Click"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-set-bool",
+        "type": "studio",
+        "position": {
+          "x": 360,
+          "y": 560
+        },
+        "data": {
+          "label": "Set Boolean",
+          "category": "logic",
+          "nodeId": "event-set-boolean",
+          "defaultConfig": {
+            "setTo": true,
+            "value": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "event",
+              "label": "Trigger"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-led",
+        "type": "studio",
+        "position": {
+          "x": 620,
+          "y": 560
+        },
+        "data": {
+          "label": "Status LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-led",
+          "defaultConfig": {
+            "label": "LED",
+            "onColor": "#22c55e",
+            "offColor": "#18181b",
+            "threshold": 0.5,
+            "blink": false,
+            "placement": {
+              "column": 3,
+              "row": 1,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "boolean",
+              "label": "On"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-dash-output",
+        "type": "studio",
+        "position": {
+          "x": 900,
+          "y": 300
+        },
+        "data": {
+          "label": "Dashboard Output",
+          "category": "dashboard",
+          "nodeId": "dashboard-output",
+          "defaultConfig": {
+            "layout": {
+              "version": 1,
+              "mode": "grid",
+              "grid": {
+                "columns": 12,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "rowHeightPx": 48
+              },
+              "flex": {
+                "direction": "row",
+                "wrap": true,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "alignItems": "stretch",
+                "justifyContent": "start"
+              }
+            },
+            "theme": {
+              "version": 1,
+              "preset": "studio-dark",
+              "canvasBackground": "#09090b",
+              "panelBackground": "#18181b",
+              "accentColor": "#22d3ee",
+              "textPrimary": "#e4e4e7",
+              "textSecondary": "#a1a1aa"
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "widgets",
+              "portType": "dashboardWidget",
+              "label": "Widgets"
+            },
+            {
+              "id": "tabs",
+              "portType": "dashboardTab",
+              "label": "Tabs"
+            },
+            {
+              "id": "theme",
+              "portType": "dashboardTheme",
+              "label": "Theme"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      }
+    ],
+    "rootEdges": [
+      {
+        "id": "demo-dash-e1",
+        "source": "demo-dash-sine",
+        "target": "demo-dash-text",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "number",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e1b",
+        "source": "demo-dash-sine",
+        "target": "demo-dash-gauge",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "number",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e2",
+        "source": "demo-dash-text",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e2b",
+        "source": "demo-dash-gauge",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e3",
+        "source": "demo-dash-button",
+        "target": "demo-dash-set-bool",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "event",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e4",
+        "source": "demo-dash-set-bool",
+        "target": "demo-dash-led",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "boolean",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e5",
+        "source": "demo-dash-button",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-dash-e6",
+        "source": "demo-dash-led",
+        "target": "demo-dash-output",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ]
+  },
+  "dependencies": {
+    "modelUrls": [],
+    "dataChannels": [],
+    "hdriPresets": []
+  }
+}

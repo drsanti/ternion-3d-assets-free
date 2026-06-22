@@ -1,0 +1,1910 @@
+{
+  "marker": "trn-flow-preset",
+  "version": 1,
+  "meta": {
+    "id": "official-primitives-playground",
+    "name": "Primitives playground",
+    "description": "Mesh materials + **Mesh Plane** floor + two **Mesh Sphere** nodes → Scene Output **Meshes** (+ **Environment**). Open **Stage** — no GLB required.",
+    "tags": [
+      "official",
+      "demo-template",
+      "primitives-playground"
+    ],
+    "category": "stage",
+    "presetKind": "flowFull",
+    "activeGraphId": "__root__",
+    "sourceScopeId": "official:primitives-playground",
+    "createdAt": "2026-06-16T08:31:00.748Z",
+    "updatedAt": "2026-06-16T08:31:00.748Z"
+  },
+  "document": {
+    "version": 1,
+    "nodes": [
+      {
+        "id": "demo-prim-mat-floor",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 60
+        },
+        "data": {
+          "label": "Floor material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#8a8a8a",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.92,
+            "meshMaterialMetalness": 0.02
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-mat-red",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 180
+        },
+        "data": {
+          "label": "Red material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#e85d5d",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.45,
+            "meshMaterialMetalness": 0.05
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-mat-blue",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#5d8fe8",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.35,
+            "meshMaterialMetalness": 0.12
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-floor",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 420
+        },
+        "data": {
+          "label": "Floor transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotationDeg": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-red",
+        "type": "studio",
+        "position": {
+          "x": 220,
+          "y": 180
+        },
+        "data": {
+          "label": "Red sphere transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": -1,
+              "y": 0.55,
+              "z": 0
+            },
+            "rotationDeg": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-blue",
+        "type": "studio",
+        "position": {
+          "x": 220,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue sphere transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": 1.25,
+              "y": 0.45,
+              "z": 0.6
+            },
+            "rotationDeg": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-plane",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 60
+        },
+        "data": {
+          "label": "Floor plane",
+          "category": "scene",
+          "nodeId": "mesh-plane",
+          "defaultConfig": {
+            "meshPlaneWidth": 5,
+            "meshPlaneHeight": 5
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "width",
+              "portType": "number",
+              "label": "Width"
+            },
+            {
+              "id": "height",
+              "portType": "number",
+              "label": "Height"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-sphere-red",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 180
+        },
+        "data": {
+          "label": "Red sphere",
+          "category": "scene",
+          "nodeId": "mesh-sphere",
+          "defaultConfig": {
+            "meshSphereRadius": 0.45,
+            "meshSphereWidthSegments": 32,
+            "meshSphereHeightSegments": 16
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "radius",
+              "portType": "number",
+              "label": "Radius"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-sphere-blue",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue sphere",
+          "category": "scene",
+          "nodeId": "mesh-sphere",
+          "defaultConfig": {
+            "meshSphereRadius": 0.35,
+            "meshSphereWidthSegments": 32,
+            "meshSphereHeightSegments": 16
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "radius",
+              "portType": "number",
+              "label": "Radius"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-scene-output",
+        "type": "studio",
+        "position": {
+          "x": 560,
+          "y": 180
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
+            "scene3d": {
+              "version": 1,
+              "model": {
+                "url": "models/psoc-e84-ai/psoc-e84-ai.glb",
+                "embeddedRigPolicy": "keep",
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotationDeg": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                }
+              },
+              "environment": {
+                "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
+                "showBackgroundTexture": true,
+                "useCubemapIbl": true,
+                "iblStrength": 1,
+                "iblOffStrengthFrac": 0.45,
+                "yawDeg": 0,
+                "backgroundColorHex": "#09090b"
+              },
+              "renderer": {
+                "dprMin": 1,
+                "dprMax": 2,
+                "antialias": true,
+                "clearColorHex": "#09090b",
+                "toneMapping": "aces",
+                "toneMappingExposure": 0.55,
+                "outputColorSpace": "srgb",
+                "shadowsEnabled": false,
+                "shadowMapSize": 2048,
+                "shadowOrthoExtent": 32,
+                "shadowBias": -0.00018,
+                "shadowNormalBias": 0.04
+              },
+              "camera": {
+                "fovDeg": 55,
+                "frameMargin": 1.06,
+                "frameDirection": {
+                  "x": 1,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "nearDivisor": 200,
+                "farMultiplier": 200,
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 15,
+                    "z": 15
+                  },
+                  "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  }
+                }
+              },
+              "controls": {
+                "enableDamping": true,
+                "dampingFactor": 0.08,
+                "enablePan": true,
+                "enableRotate": true,
+                "enableZoom": true,
+                "screenSpacePanning": true,
+                "zoomToCursor": false,
+                "rotateSpeed": 1,
+                "zoomSpeed": 1,
+                "panSpeed": 1,
+                "keyRotateSpeed": 1,
+                "keyPanSpeed": 7,
+                "autoRotate": false,
+                "autoRotateSpeed": 2,
+                "minDistance": 0,
+                "maxDistance": null,
+                "minPolarAngleDeg": 0,
+                "maxPolarAngleDeg": 180,
+                "minAzimuthDeg": null,
+                "maxAzimuthDeg": null,
+                "minTargetRadius": 0,
+                "maxTargetRadius": null,
+                "mouseButtons": {
+                  "left": "ROTATE",
+                  "middle": "DOLLY",
+                  "right": "PAN"
+                },
+                "touches": {
+                  "one": "ROTATE",
+                  "two": "DOLLY_PAN"
+                }
+              },
+              "lights": {
+                "ambient": {
+                  "colorHex": "#ffffff",
+                  "intensity": 0.22
+                },
+                "directionals": [
+                  {
+                    "id": "studio-main",
+                    "colorHex": "#ffffff",
+                    "intensity": 0,
+                    "position": {
+                      "x": 2.5,
+                      "y": 3.5,
+                      "z": 2
+                    }
+                  }
+                ]
+              },
+              "helpers": {
+                "grid": {
+                  "enabled": false,
+                  "size": 24,
+                  "divisions": 96,
+                  "colorCenterHex": "#71717a",
+                  "colorGridHex": "#3f3f46",
+                  "opacity": 0.85,
+                  "y": -0.35
+                },
+                "axes": {
+                  "enabled": false,
+                  "length": 3,
+                  "opacity": 0.9
+                },
+                "camera": {
+                  "enabled": false
+                },
+                "directionalLight": {
+                  "enabled": false,
+                  "planeSize": 1,
+                  "attachToDirectionalId": null
+                }
+              },
+              "fog": {
+                "enabled": false,
+                "mode": "linear",
+                "near": 1,
+                "far": 50,
+                "density": 0.05,
+                "colorHex": "#1a1a2e"
+              },
+              "postProcessing": {
+                "enabled": false,
+                "enableBloom": true,
+                "bloomIntensity": 1.5,
+                "bloomThreshold": 1
+              },
+              "contactShadows": {
+                "enabled": false,
+                "opacity": 0.5,
+                "blur": 2,
+                "far": 10,
+                "scale": 10,
+                "colorHex": "#000000"
+              },
+              "particleEmitter": {
+                "enabled": false,
+                "preset": "sparks",
+                "trigger": 0,
+                "rate": 0,
+                "life": 1,
+                "colorHex": "#ffaa00",
+                "target": ""
+              },
+              "physics": {
+                "enabled": false,
+                "gravityY": -9.81
+              }
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "models",
+              "portType": "string",
+              "label": "Models"
+            },
+            {
+              "id": "meshes",
+              "portType": "mesh",
+              "label": "Meshes"
+            },
+            {
+              "id": "env",
+              "portType": "environment",
+              "label": "Environment"
+            },
+            {
+              "id": "cam",
+              "portType": "camera",
+              "label": "Camera"
+            },
+            {
+              "id": "anim",
+              "portType": "glbAnimation",
+              "label": "Animation"
+            },
+            {
+              "id": "xf",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "settings",
+              "portType": "number",
+              "label": "Exposure"
+            },
+            {
+              "id": "fog",
+              "portType": "fog",
+              "label": "Fog"
+            },
+            {
+              "id": "lite",
+              "portType": "studioLight",
+              "label": "Studio Light"
+            },
+            {
+              "id": "post",
+              "portType": "postProcessing",
+              "label": "Post-FX"
+            },
+            {
+              "id": "cshadow",
+              "portType": "contactShadows",
+              "label": "Contact Shadows"
+            },
+            {
+              "id": "emitter",
+              "portType": "particleEmitter",
+              "label": "Particles"
+            },
+            {
+              "id": "phys",
+              "portType": "physicsScene",
+              "label": "Physics"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 185,
+            "minHeight": 72
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-environment",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 540
+        },
+        "data": {
+          "label": "Environment",
+          "category": "scene",
+          "nodeId": "environment",
+          "defaultConfig": {
+            "version": 1,
+            "presetIndex": 0,
+            "studioAssetId": "env.cubemap.park",
+            "showBackgroundTexture": true,
+            "useCubemapIbl": true,
+            "iblStrength": 1,
+            "iblOffStrengthFrac": 0.45,
+            "yawDeg": 0,
+            "backgroundColorHex": "#09090b",
+            "inputSocketVisibility": {},
+            "environmentControlsExpanded": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "environment",
+              "label": "Environment"
+            }
+          ],
+          "inputHandles": [],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 240,
+            "minHeight": 72
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "demo-prim-e-mat-floor",
+        "source": "demo-prim-mat-floor",
+        "target": "demo-prim-plane",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-floor",
+        "source": "demo-prim-xf-floor",
+        "target": "demo-prim-plane",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-plane-out",
+        "source": "demo-prim-plane",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-mat-red",
+        "source": "demo-prim-mat-red",
+        "target": "demo-prim-sphere-red",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-red",
+        "source": "demo-prim-xf-red",
+        "target": "demo-prim-sphere-red",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-sphere-red-out",
+        "source": "demo-prim-sphere-red",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-mat-blue",
+        "source": "demo-prim-mat-blue",
+        "target": "demo-prim-sphere-blue",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-blue",
+        "source": "demo-prim-xf-blue",
+        "target": "demo-prim-sphere-blue",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-sphere-blue-out",
+        "source": "demo-prim-sphere-blue",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-env",
+        "source": "demo-prim-environment",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "env",
+        "animated": true,
+        "label": "environment",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ],
+    "rootNodes": [
+      {
+        "id": "demo-prim-mat-floor",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 60
+        },
+        "data": {
+          "label": "Floor material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#8a8a8a",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.92,
+            "meshMaterialMetalness": 0.02
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-mat-red",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 180
+        },
+        "data": {
+          "label": "Red material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#e85d5d",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.45,
+            "meshMaterialMetalness": 0.05
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-mat-blue",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue material",
+          "category": "scene",
+          "nodeId": "mesh-material-standard",
+          "defaultConfig": {
+            "meshMaterialColorHex": "#5d8fe8",
+            "meshMaterialOpacity": 1,
+            "meshMaterialRoughness": 0.35,
+            "meshMaterialMetalness": 0.12
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "material",
+              "label": "Material"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "color",
+              "portType": "vector3",
+              "label": "Color"
+            },
+            {
+              "id": "roughness",
+              "portType": "number",
+              "label": "Roughness"
+            },
+            {
+              "id": "metalness",
+              "portType": "number",
+              "label": "Metalness"
+            },
+            {
+              "id": "opacity",
+              "portType": "number",
+              "label": "Opacity"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-floor",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 420
+        },
+        "data": {
+          "label": "Floor transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotationDeg": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-red",
+        "type": "studio",
+        "position": {
+          "x": 220,
+          "y": 180
+        },
+        "data": {
+          "label": "Red sphere transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": -1,
+              "y": 0.55,
+              "z": 0
+            },
+            "rotationDeg": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-xf-blue",
+        "type": "studio",
+        "position": {
+          "x": 220,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue sphere transform",
+          "category": "utility",
+          "nodeId": "object-transform",
+          "defaultConfig": {
+            "version": 1,
+            "position": {
+              "x": 1.25,
+              "y": 0.45,
+              "z": 0.6
+            },
+            "rotationDeg": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "transform",
+              "label": "Transform"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-plane",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 60
+        },
+        "data": {
+          "label": "Floor plane",
+          "category": "scene",
+          "nodeId": "mesh-plane",
+          "defaultConfig": {
+            "meshPlaneWidth": 5,
+            "meshPlaneHeight": 5
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "width",
+              "portType": "number",
+              "label": "Width"
+            },
+            {
+              "id": "height",
+              "portType": "number",
+              "label": "Height"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-sphere-red",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 180
+        },
+        "data": {
+          "label": "Red sphere",
+          "category": "scene",
+          "nodeId": "mesh-sphere",
+          "defaultConfig": {
+            "meshSphereRadius": 0.45,
+            "meshSphereWidthSegments": 32,
+            "meshSphereHeightSegments": 16
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "radius",
+              "portType": "number",
+              "label": "Radius"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-sphere-blue",
+        "type": "studio",
+        "position": {
+          "x": 300,
+          "y": 300
+        },
+        "data": {
+          "label": "Blue sphere",
+          "category": "scene",
+          "nodeId": "mesh-sphere",
+          "defaultConfig": {
+            "meshSphereRadius": 0.35,
+            "meshSphereWidthSegments": 32,
+            "meshSphereHeightSegments": 16
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "mesh",
+              "label": "Mesh"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "material",
+              "portType": "material",
+              "label": "Material"
+            },
+            {
+              "id": "transform",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "radius",
+              "portType": "number",
+              "label": "Radius"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-scene-output",
+        "type": "studio",
+        "position": {
+          "x": 560,
+          "y": 180
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
+            "scene3d": {
+              "version": 1,
+              "model": {
+                "url": "models/psoc-e84-ai/psoc-e84-ai.glb",
+                "embeddedRigPolicy": "keep",
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotationDeg": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                }
+              },
+              "environment": {
+                "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
+                "showBackgroundTexture": true,
+                "useCubemapIbl": true,
+                "iblStrength": 1,
+                "iblOffStrengthFrac": 0.45,
+                "yawDeg": 0,
+                "backgroundColorHex": "#09090b"
+              },
+              "renderer": {
+                "dprMin": 1,
+                "dprMax": 2,
+                "antialias": true,
+                "clearColorHex": "#09090b",
+                "toneMapping": "aces",
+                "toneMappingExposure": 0.55,
+                "outputColorSpace": "srgb",
+                "shadowsEnabled": false,
+                "shadowMapSize": 2048,
+                "shadowOrthoExtent": 32,
+                "shadowBias": -0.00018,
+                "shadowNormalBias": 0.04
+              },
+              "camera": {
+                "fovDeg": 55,
+                "frameMargin": 1.06,
+                "frameDirection": {
+                  "x": 1,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "nearDivisor": 200,
+                "farMultiplier": 200,
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 15,
+                    "z": 15
+                  },
+                  "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  }
+                }
+              },
+              "controls": {
+                "enableDamping": true,
+                "dampingFactor": 0.08,
+                "enablePan": true,
+                "enableRotate": true,
+                "enableZoom": true,
+                "screenSpacePanning": true,
+                "zoomToCursor": false,
+                "rotateSpeed": 1,
+                "zoomSpeed": 1,
+                "panSpeed": 1,
+                "keyRotateSpeed": 1,
+                "keyPanSpeed": 7,
+                "autoRotate": false,
+                "autoRotateSpeed": 2,
+                "minDistance": 0,
+                "maxDistance": null,
+                "minPolarAngleDeg": 0,
+                "maxPolarAngleDeg": 180,
+                "minAzimuthDeg": null,
+                "maxAzimuthDeg": null,
+                "minTargetRadius": 0,
+                "maxTargetRadius": null,
+                "mouseButtons": {
+                  "left": "ROTATE",
+                  "middle": "DOLLY",
+                  "right": "PAN"
+                },
+                "touches": {
+                  "one": "ROTATE",
+                  "two": "DOLLY_PAN"
+                }
+              },
+              "lights": {
+                "ambient": {
+                  "colorHex": "#ffffff",
+                  "intensity": 0.22
+                },
+                "directionals": [
+                  {
+                    "id": "studio-main",
+                    "colorHex": "#ffffff",
+                    "intensity": 0,
+                    "position": {
+                      "x": 2.5,
+                      "y": 3.5,
+                      "z": 2
+                    }
+                  }
+                ]
+              },
+              "helpers": {
+                "grid": {
+                  "enabled": false,
+                  "size": 24,
+                  "divisions": 96,
+                  "colorCenterHex": "#71717a",
+                  "colorGridHex": "#3f3f46",
+                  "opacity": 0.85,
+                  "y": -0.35
+                },
+                "axes": {
+                  "enabled": false,
+                  "length": 3,
+                  "opacity": 0.9
+                },
+                "camera": {
+                  "enabled": false
+                },
+                "directionalLight": {
+                  "enabled": false,
+                  "planeSize": 1,
+                  "attachToDirectionalId": null
+                }
+              },
+              "fog": {
+                "enabled": false,
+                "mode": "linear",
+                "near": 1,
+                "far": 50,
+                "density": 0.05,
+                "colorHex": "#1a1a2e"
+              },
+              "postProcessing": {
+                "enabled": false,
+                "enableBloom": true,
+                "bloomIntensity": 1.5,
+                "bloomThreshold": 1
+              },
+              "contactShadows": {
+                "enabled": false,
+                "opacity": 0.5,
+                "blur": 2,
+                "far": 10,
+                "scale": 10,
+                "colorHex": "#000000"
+              },
+              "particleEmitter": {
+                "enabled": false,
+                "preset": "sparks",
+                "trigger": 0,
+                "rate": 0,
+                "life": 1,
+                "colorHex": "#ffaa00",
+                "target": ""
+              },
+              "physics": {
+                "enabled": false,
+                "gravityY": -9.81
+              }
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "models",
+              "portType": "string",
+              "label": "Models"
+            },
+            {
+              "id": "meshes",
+              "portType": "mesh",
+              "label": "Meshes"
+            },
+            {
+              "id": "env",
+              "portType": "environment",
+              "label": "Environment"
+            },
+            {
+              "id": "cam",
+              "portType": "camera",
+              "label": "Camera"
+            },
+            {
+              "id": "anim",
+              "portType": "glbAnimation",
+              "label": "Animation"
+            },
+            {
+              "id": "xf",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "settings",
+              "portType": "number",
+              "label": "Exposure"
+            },
+            {
+              "id": "fog",
+              "portType": "fog",
+              "label": "Fog"
+            },
+            {
+              "id": "lite",
+              "portType": "studioLight",
+              "label": "Studio Light"
+            },
+            {
+              "id": "post",
+              "portType": "postProcessing",
+              "label": "Post-FX"
+            },
+            {
+              "id": "cshadow",
+              "portType": "contactShadows",
+              "label": "Contact Shadows"
+            },
+            {
+              "id": "emitter",
+              "portType": "particleEmitter",
+              "label": "Particles"
+            },
+            {
+              "id": "phys",
+              "portType": "physicsScene",
+              "label": "Physics"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 185,
+            "minHeight": 72
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      },
+      {
+        "id": "demo-prim-environment",
+        "type": "studio",
+        "position": {
+          "x": 60,
+          "y": 540
+        },
+        "data": {
+          "label": "Environment",
+          "category": "scene",
+          "nodeId": "environment",
+          "defaultConfig": {
+            "version": 1,
+            "presetIndex": 0,
+            "studioAssetId": "env.cubemap.park",
+            "showBackgroundTexture": true,
+            "useCubemapIbl": true,
+            "iblStrength": 1,
+            "iblOffStrengthFrac": 0.45,
+            "yawDeg": 0,
+            "backgroundColorHex": "#09090b",
+            "inputSocketVisibility": {},
+            "environmentControlsExpanded": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "environment",
+              "label": "Environment"
+            }
+          ],
+          "inputHandles": [],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 240,
+            "minHeight": 72
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "selected": false
+      }
+    ],
+    "rootEdges": [
+      {
+        "id": "demo-prim-e-mat-floor",
+        "source": "demo-prim-mat-floor",
+        "target": "demo-prim-plane",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-floor",
+        "source": "demo-prim-xf-floor",
+        "target": "demo-prim-plane",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-plane-out",
+        "source": "demo-prim-plane",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-mat-red",
+        "source": "demo-prim-mat-red",
+        "target": "demo-prim-sphere-red",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-red",
+        "source": "demo-prim-xf-red",
+        "target": "demo-prim-sphere-red",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-sphere-red-out",
+        "source": "demo-prim-sphere-red",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-mat-blue",
+        "source": "demo-prim-mat-blue",
+        "target": "demo-prim-sphere-blue",
+        "sourceHandle": "out",
+        "targetHandle": "material",
+        "animated": true,
+        "label": "material",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-xf-blue",
+        "source": "demo-prim-xf-blue",
+        "target": "demo-prim-sphere-blue",
+        "sourceHandle": "out",
+        "targetHandle": "transform",
+        "animated": true,
+        "label": "transform",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-sphere-blue-out",
+        "source": "demo-prim-sphere-blue",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "meshes",
+        "animated": true,
+        "label": "mesh",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-prim-e-env",
+        "source": "demo-prim-environment",
+        "target": "demo-prim-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "env",
+        "animated": true,
+        "label": "environment",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      }
+    ]
+  },
+  "dependencies": {
+    "modelUrls": [],
+    "dataChannels": [],
+    "hdriPresets": []
+  }
+}

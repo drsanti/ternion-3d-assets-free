@@ -14,18 +14,1380 @@
     "presetKind": "flowFull",
     "activeGraphId": "__root__",
     "sourceScopeId": "official:audio-oscillator-tone",
-    "createdAt": "2026-06-07T09:38:56.226Z",
-    "updatedAt": "2026-06-07T09:38:56.226Z"
+    "createdAt": "2026-06-16T08:30:52.396Z",
+    "updatedAt": "2026-06-16T08:30:52.396Z"
   },
   "document": {
     "version": 1,
     "nodes": [
       {
-        "id": "demo-osc",
+        "id": "frame_1781583006472_dgfrt",
+        "type": "studio-frame",
+        "position": {
+          "x": -61.16281885153431,
+          "y": -135.16669656069615
+        },
+        "data": {
+          "label": "Frame",
+          "padding": 16,
+          "headerHeight": 28,
+          "padTop": 4
+        },
+        "dragHandle": ".studio-frame-node__header",
+        "selectable": true,
+        "draggable": true,
+        "zIndex": -1,
+        "style": {
+          "width": 530.6548192675134,
+          "height": 190.13255447013157
+        },
+        "width": 530.6548192675134,
+        "height": 190.13255447013157,
+        "selected": false
+      },
+      {
+        "id": "demo-stage-model-select",
         "type": "studio",
         "position": {
-          "x": 72,
-          "y": 200
+          "x": 17.551408749024034,
+          "y": 32
+        },
+        "data": {
+          "label": "Model Source (PSoC E84)",
+          "category": "scene",
+          "nodeId": "model-select",
+          "defaultConfig": {
+            "selectedStudioAssetId": "model.tesa-drone",
+            "selectedModelUrl": "models/tesa-drone/tesa-drone.glb",
+            "generatedChildNodeIds": []
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "string",
+              "label": "Model"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 208,
+            "minHeight": 88,
+            "contentMinWidth": 219,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 290
+            },
+            "socketValuesVisible": false,
+            "bodyControlsVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 219,
+          "height": 64
+        },
+        "measured": {
+          "width": 219,
+          "height": 64
+        },
+        "width": 219,
+        "height": 64,
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "demo-scene-output",
+        "type": "studio",
+        "position": {
+          "x": 329.65481926751346,
+          "y": 37.82532878550589
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
+            "scene3d": {
+              "version": 1,
+              "model": {
+                "url": "models/psoc-e84-ai/psoc-e84-ai.glb",
+                "embeddedRigPolicy": "keep",
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotationDeg": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                }
+              },
+              "environment": {
+                "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
+                "showBackgroundTexture": true,
+                "useCubemapIbl": true,
+                "iblStrength": 1,
+                "iblOffStrengthFrac": 0.45,
+                "yawDeg": 0,
+                "backgroundColorHex": "#09090b"
+              },
+              "renderer": {
+                "dprMin": 1,
+                "dprMax": 2,
+                "antialias": true,
+                "clearColorHex": "#09090b",
+                "toneMapping": "aces",
+                "toneMappingExposure": 0.55,
+                "outputColorSpace": "srgb",
+                "shadowsEnabled": false,
+                "shadowMapSize": 2048,
+                "shadowOrthoExtent": 32,
+                "shadowBias": -0.00018,
+                "shadowNormalBias": 0.04
+              },
+              "camera": {
+                "fovDeg": 55,
+                "frameMargin": 1.06,
+                "frameDirection": {
+                  "x": 1,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "nearDivisor": 200,
+                "farMultiplier": 200,
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 15,
+                    "z": 15
+                  },
+                  "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  }
+                }
+              },
+              "controls": {
+                "enableDamping": true,
+                "dampingFactor": 0.08,
+                "enablePan": true,
+                "enableRotate": true,
+                "enableZoom": true,
+                "screenSpacePanning": true,
+                "zoomToCursor": false,
+                "rotateSpeed": 1,
+                "zoomSpeed": 1,
+                "panSpeed": 1,
+                "keyRotateSpeed": 1,
+                "keyPanSpeed": 7,
+                "autoRotate": false,
+                "autoRotateSpeed": 2,
+                "minDistance": 0,
+                "maxDistance": null,
+                "minPolarAngleDeg": 0,
+                "maxPolarAngleDeg": 180,
+                "minAzimuthDeg": null,
+                "maxAzimuthDeg": null,
+                "minTargetRadius": 0,
+                "maxTargetRadius": null,
+                "mouseButtons": {
+                  "left": "ROTATE",
+                  "middle": "DOLLY",
+                  "right": "PAN"
+                },
+                "touches": {
+                  "one": "ROTATE",
+                  "two": "DOLLY_PAN"
+                }
+              },
+              "lights": {
+                "ambient": {
+                  "colorHex": "#ffffff",
+                  "intensity": 0.22
+                },
+                "directionals": [
+                  {
+                    "id": "studio-main",
+                    "colorHex": "#ffffff",
+                    "intensity": 0,
+                    "position": {
+                      "x": 2.5,
+                      "y": 3.5,
+                      "z": 2
+                    }
+                  }
+                ]
+              },
+              "helpers": {
+                "grid": {
+                  "enabled": false,
+                  "size": 24,
+                  "divisions": 96,
+                  "colorCenterHex": "#71717a",
+                  "colorGridHex": "#3f3f46",
+                  "opacity": 0.85,
+                  "y": -0.35
+                },
+                "axes": {
+                  "enabled": false,
+                  "length": 3,
+                  "opacity": 0.9
+                },
+                "camera": {
+                  "enabled": false
+                },
+                "directionalLight": {
+                  "enabled": false,
+                  "planeSize": 1,
+                  "attachToDirectionalId": null
+                }
+              },
+              "fog": {
+                "enabled": false,
+                "mode": "linear",
+                "near": 1,
+                "far": 50,
+                "density": 0.05,
+                "colorHex": "#1a1a2e"
+              },
+              "postProcessing": {
+                "enabled": false,
+                "enableBloom": true,
+                "bloomIntensity": 1.5,
+                "bloomThreshold": 1
+              },
+              "contactShadows": {
+                "enabled": false,
+                "opacity": 0.5,
+                "blur": 2,
+                "far": 10,
+                "scale": 10,
+                "colorHex": "#000000"
+              },
+              "particleEmitter": {
+                "enabled": false,
+                "preset": "sparks",
+                "trigger": 0,
+                "rate": 0,
+                "life": 1,
+                "colorHex": "#ffaa00",
+                "target": ""
+              },
+              "physics": {
+                "enabled": false,
+                "gravityY": -9.81
+              }
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "models",
+              "portType": "string",
+              "label": "Models"
+            },
+            {
+              "id": "meshes",
+              "portType": "mesh",
+              "label": "Meshes"
+            },
+            {
+              "id": "env",
+              "portType": "environment",
+              "label": "Environment"
+            },
+            {
+              "id": "cam",
+              "portType": "camera",
+              "label": "Camera"
+            },
+            {
+              "id": "anim",
+              "portType": "glbAnimation",
+              "label": "Animation"
+            },
+            {
+              "id": "xf",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "settings",
+              "portType": "number",
+              "label": "Exposure"
+            },
+            {
+              "id": "fog",
+              "portType": "fog",
+              "label": "Fog"
+            },
+            {
+              "id": "lite",
+              "portType": "studioLight",
+              "label": "Studio Light"
+            },
+            {
+              "id": "post",
+              "portType": "postProcessing",
+              "label": "Post-FX"
+            },
+            {
+              "id": "cshadow",
+              "portType": "contactShadows",
+              "label": "Contact Shadows"
+            },
+            {
+              "id": "emitter",
+              "portType": "particleEmitter",
+              "label": "Particles"
+            },
+            {
+              "id": "phys",
+              "portType": "physicsScene",
+              "label": "Physics"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 185,
+            "minHeight": 72,
+            "contentMinWidth": 185,
+            "contentMinHeight": 89,
+            "layoutWidthByChrome": {
+              "all": 274
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 185,
+        "style": {
+          "width": 185,
+          "height": 90
+        },
+        "measured": {
+          "width": 185,
+          "height": 90
+        },
+        "height": 90,
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "demo-stage-environment",
+        "type": "studio",
+        "position": {
+          "x": 16,
+          "y": 110.13255447013157
+        },
+        "data": {
+          "label": "Environment (Park)",
+          "category": "scene",
+          "nodeId": "environment",
+          "defaultConfig": {
+            "version": 1,
+            "presetIndex": 0,
+            "studioAssetId": "env.cubemap.park",
+            "showBackgroundTexture": true,
+            "useCubemapIbl": true,
+            "iblStrength": 1,
+            "iblOffStrengthFrac": 0.45,
+            "yawDeg": 0,
+            "backgroundColorHex": "#09090b",
+            "inputSocketVisibility": {},
+            "environmentControlsExpanded": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "environment",
+              "label": "Environment"
+            }
+          ],
+          "inputHandles": [],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 240,
+            "minHeight": 72,
+            "contentMinWidth": 240,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 247
+            },
+            "bodyControlsVisible": false,
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 240,
+        "height": 64,
+        "style": {
+          "width": 240,
+          "height": 64
+        },
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-5zeg1w5l",
+        "type": "studio",
+        "position": {
+          "x": 919.5752591302992,
+          "y": 547.9693266178015
+        },
+        "data": {
+          "label": "Limit 0.5",
+          "category": "generator",
+          "nodeId": "float-constant",
+          "defaultConfig": {
+            "value": 0.5,
+            "numberMode": "float",
+            "step": 0.01
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 99,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 100
+        },
+        "measured": {
+          "width": 170,
+          "height": 100
+        },
+        "width": 170,
+        "height": 100,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-fzb0hgvf",
+        "type": "studio",
+        "position": {
+          "x": 1182.2821035133998,
+          "y": 547.8943573828952
+        },
+        "data": {
+          "label": "Sine > 0.5",
+          "category": "logic",
+          "nodeId": "compare",
+          "defaultConfig": {
+            "operation": ">",
+            "publishToDashboard": true,
+            "onLabel": "Above",
+            "offLabel": "Below",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 4,
+              "row": 10,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 180,
+            "minHeight": 96,
+            "contentMinWidth": 180,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 180
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "a",
+              "portType": "number",
+              "label": "A"
+            },
+            {
+              "id": "b",
+              "portType": "number",
+              "label": "B"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 180,
+          "height": 88
+        },
+        "measured": {
+          "width": 180,
+          "height": 88
+        },
+        "width": 180,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-fmoax2sm",
+        "type": "studio",
+        "position": {
+          "x": 1439.1237141865108,
+          "y": 99.36128510364715
+        },
+        "data": {
+          "label": "Live value",
+          "category": "dashboard",
+          "nodeId": "dashboard-text",
+          "defaultConfig": {
+            "label": "Value",
+            "unit": "",
+            "decimals": 2,
+            "showStatusBar": true,
+            "placement": {
+              "column": 7,
+              "row": 10,
+              "columnSpan": 2,
+              "rowSpan": 1
+            },
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "rgba(228,228,231,0.95)"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ]
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-5b1mavlr",
+        "type": "studio",
+        "position": {
+          "x": 1624.4275797822934,
+          "y": 228.59737531553725
+        },
+        "data": {
+          "label": "Dashboard Gauge",
+          "category": "dashboard",
+          "nodeId": "dashboard-gauge",
+          "defaultConfig": {
+            "min": 0,
+            "max": 100,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 4,
+              "row": 5,
+              "columnSpan": 5,
+              "rowSpan": 3
+            },
+            "flex": {
+              "order": 2,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "200px"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-u7k08e8b",
+        "type": "studio",
+        "position": {
+          "x": 1433.0925166734235,
+          "y": 433.49664984824204
+        },
+        "data": {
+          "label": "Enable output",
+          "category": "dashboard",
+          "nodeId": "dashboard-switch",
+          "defaultConfig": {
+            "label": "Switch",
+            "value": true,
+            "placement": {
+              "column": 2,
+              "row": 2,
+              "columnSpan": 10,
+              "rowSpan": 1
+            },
+            "flex": {
+              "order": 0,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "auto"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 76
+        },
+        "measured": {
+          "width": 170,
+          "height": 76
+        },
+        "width": 170,
+        "height": 76,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-qj20w84t",
+        "type": "studio",
+        "position": {
+          "x": 1426.1526828229844,
+          "y": 548.5058992970187
+        },
+        "data": {
+          "label": "Setpoint",
+          "category": "dashboard",
+          "nodeId": "dashboard-slider",
+          "defaultConfig": {
+            "label": "Slider",
+            "min": 0,
+            "max": 100,
+            "value": 50,
+            "step": 1,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 4,
+              "row": 9,
+              "columnSpan": 5,
+              "rowSpan": 1
+            },
+            "flex": {
+              "order": 1,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 76
+        },
+        "measured": {
+          "width": 170,
+          "height": 76
+        },
+        "width": 170,
+        "height": 76,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-dr3hwn3w",
+        "type": "studio",
+        "position": {
+          "x": 1392.5370443847055,
+          "y": 685.2024526363995
+        },
+        "data": {
+          "label": "Pulse LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-button",
+          "defaultConfig": {
+            "label": "Button",
+            "variant": "primary",
+            "placement": {
+              "column": 7,
+              "row": 4,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 89,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "event",
+              "label": "Click"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 90
+        },
+        "measured": {
+          "width": 170,
+          "height": 90
+        },
+        "width": 170,
+        "height": 90,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-g36gqn1g",
+        "type": "studio",
+        "position": {
+          "x": 1692.589302145095,
+          "y": 697.955719123493
+        },
+        "data": {
+          "label": "Set Boolean",
+          "category": "logic",
+          "nodeId": "event-set-boolean",
+          "defaultConfig": {
+            "setTo": true,
+            "value": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "event",
+              "label": "Trigger"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-wvlr3q7w",
+        "type": "studio",
+        "position": {
+          "x": 1879.2009161350286,
+          "y": 393.34873363191457
+        },
+        "data": {
+          "label": "Dashboard LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-led",
+          "defaultConfig": {
+            "label": "LED",
+            "onColor": "#22c55e",
+            "offColor": "#18181b",
+            "threshold": 0.5,
+            "blink": false,
+            "placement": {
+              "column": 4,
+              "row": 4,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "boolean",
+              "label": "On"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-jcbu22qd",
+        "type": "studio",
+        "position": {
+          "x": 2049.482533019459,
+          "y": 114.35483815219268
+        },
+        "data": {
+          "label": "Dashboard Output",
+          "category": "dashboard",
+          "nodeId": "dashboard-output",
+          "defaultConfig": {
+            "layout": {
+              "version": 1,
+              "mode": "grid",
+              "grid": {
+                "columns": 12,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "rowHeightPx": 48
+              },
+              "flex": {
+                "direction": "row",
+                "wrap": true,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "alignItems": "stretch",
+                "justifyContent": "start"
+              }
+            },
+            "theme": {
+              "version": 1,
+              "preset": "studio-dark",
+              "canvasBackground": "#09090b",
+              "panelBackground": "#18181b",
+              "accentColor": "#22d3ee",
+              "textPrimary": "#e4e4e7",
+              "textSecondary": "#a1a1aa"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 172,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 172
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "inputHandles": [
+            {
+              "id": "widgets",
+              "portType": "dashboardWidget",
+              "label": "Widgets"
+            },
+            {
+              "id": "tabs",
+              "portType": "dashboardTab",
+              "label": "Tabs"
+            },
+            {
+              "id": "theme",
+              "portType": "dashboardTheme",
+              "label": "Theme"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 172,
+          "height": 64
+        },
+        "measured": {
+          "width": 172,
+          "height": 64
+        },
+        "width": 172,
+        "height": 64,
+        "selected": false
+      },
+      {
+        "id": "math-1781583032120-703",
+        "type": "studio",
+        "position": {
+          "x": 1113.9311964475442,
+          "y": 105.74382859535245
+        },
+        "width": 180,
+        "style": {
+          "width": 180,
+          "height": 100
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Math",
+          "category": "utility",
+          "nodeId": "math",
+          "defaultConfig": {
+            "operation": "sin"
+          },
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 180,
+            "minHeight": 96,
+            "layoutWidthByChrome": {
+              "all": 180
+            },
+            "contentMinWidth": 180,
+            "contentMinHeight": 87
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "a",
+              "portType": "number",
+              "label": "A"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 180,
+          "height": 100
+        },
+        "height": 100,
+        "selected": false
+      },
+      {
+        "id": "scene-time-1781583054908-4",
+        "type": "studio",
+        "position": {
+          "x": 838.0997040578139,
+          "y": 122.3458817883186
+        },
+        "width": 179,
+        "style": {
+          "width": 179,
+          "height": 102
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Scene Time",
+          "category": "scene",
+          "nodeId": "scene-time",
+          "defaultConfig": {},
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 170,
+            "minHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "contentMinWidth": 179,
+            "contentMinHeight": 89
+          },
+          "outputHandles": [
+            {
+              "id": "seconds",
+              "portType": "number",
+              "label": "Seconds"
+            },
+            {
+              "id": "frames",
+              "portType": "number",
+              "label": "Frames"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 179,
+          "height": 102
+        },
+        "height": 102,
+        "selected": false
+      },
+      {
+        "id": "map-range-1781583706774-576",
+        "type": "studio",
+        "position": {
+          "x": 1418.7033590862006,
+          "y": 231.9395897273595
+        },
+        "width": 173,
+        "style": {
+          "width": 173,
+          "height": 192
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Map Range",
+          "category": "transform",
+          "nodeId": "map-range",
+          "defaultConfig": {
+            "value": 0,
+            "inMin": -1,
+            "inMax": 1,
+            "outMin": 0,
+            "outMax": 100,
+            "clamp": true
+          },
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 170,
+            "minHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "contentMinWidth": 173,
+            "contentMinHeight": 191
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "value",
+              "portType": "number",
+              "label": "Value"
+            },
+            {
+              "id": "inMin",
+              "portType": "number",
+              "label": "From min"
+            },
+            {
+              "id": "inMax",
+              "portType": "number",
+              "label": "From max"
+            },
+            {
+              "id": "outMin",
+              "portType": "number",
+              "label": "To min"
+            },
+            {
+              "id": "outMax",
+              "portType": "number",
+              "label": "To max"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 173,
+          "height": 192
+        },
+        "height": 192,
+        "selected": false
+      },
+      {
+        "id": "layout--1781598312078-fgkdxtlt",
+        "type": "studio",
+        "position": {
+          "x": -125.52464465454929,
+          "y": 203.40726439366037
         },
         "data": {
           "label": "Oscillator (sweep)",
@@ -42,8 +1404,19 @@
             "sweepCurve": "linear",
             "sweepDirection": "up-down",
             "sweepMode": "loop",
-            "gain": 0.05,
-            "gate": false
+            "gain": 0.5,
+            "gate": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 237,
+            "contentMinHeight": 304
           },
           "outputHandles": [
             {
@@ -76,41 +1449,27 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 220,
-            "minHeight": 72,
-            "layoutWidthByChrome": {
-              "all": 220
-            },
-            "contentMinWidth": 220,
-            "contentMinHeight": 303
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z",
-          "liveNumberByHandle": {
-            "level": 0
-          }
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "measured": {
-          "width": 220,
-          "height": 304
+          "width": 237,
+          "height": 305
         },
-        "width": 220,
-        "height": 304,
+        "width": 237,
+        "height": 305,
         "style": {
-          "width": 220,
-          "height": 304
+          "width": 237,
+          "height": 305
         },
         "selected": false
       },
       {
-        "id": "demo-osc-scope",
+        "id": "layout--1781598312078-z1739yix",
         "type": "studio",
         "position": {
-          "x": 418.67510378328984,
-          "y": 114.44730163446448
+          "x": 206.11834040151223,
+          "y": 136.63954532957385
         },
         "data": {
           "label": "Audio Scope",
@@ -120,7 +1479,7 @@
             "monitorModeEnabled": false,
             "sourceMode": "node",
             "sourceNodeId": "demo-osc",
-            "mode": "waveform",
+            "mode": "both",
             "fps": 30,
             "fftSize": 2048,
             "smoothing": 0.8,
@@ -140,6 +1499,17 @@
             "timeDivisions": 8,
             "freqBarCount": 64
           },
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": false,
+            "minWidth": 280,
+            "minHeight": 168,
+            "layoutWidthByChrome": {
+              "all": 280
+            },
+            "contentMinWidth": 280,
+            "contentMinHeight": 307
+          },
           "inputHandles": [
             {
               "id": "audio",
@@ -154,18 +1524,7 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": true,
-            "allowBodyCollapse": false,
-            "minWidth": 280,
-            "minHeight": 168,
-            "layoutWidthByChrome": {
-              "all": 280
-            },
-            "contentMinWidth": 280,
-            "contentMinHeight": 307
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "width": 280,
@@ -177,11 +1536,11 @@
         "selected": false
       },
       {
-        "id": "demo-osc-out",
+        "id": "layout--1781598312078-t1mjai69",
         "type": "studio",
         "position": {
-          "x": 425.3858021922155,
-          "y": 471.48676970819787
+          "x": 210.38825023402893,
+          "y": 449.30382511913825
         },
         "data": {
           "label": "Audio Output",
@@ -195,8 +1554,19 @@
             "limiterEnabled": true,
             "maxGain": 0.25,
             "requiresUserGesture": true,
-            "gain": 0.15,
-            "gate": false
+            "gain": 0.25,
+            "gate": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 223
           },
           "inputHandles": [
             {
@@ -217,18 +1587,7 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 220,
-            "minHeight": 72,
-            "layoutWidthByChrome": {
-              "all": 220
-            },
-            "contentMinWidth": 220,
-            "contentMinHeight": 223
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "measured": {
@@ -246,9 +1605,208 @@
     ],
     "edges": [
       {
-        "id": "demo-osc-e1",
-        "source": "demo-osc",
-        "target": "demo-osc-scope",
+        "id": "demo-stage-e1",
+        "source": "demo-stage-model-select",
+        "target": "demo-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "models",
+        "animated": true,
+        "label": "string",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-stage-e2",
+        "source": "demo-stage-environment",
+        "target": "demo-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "env",
+        "animated": true,
+        "label": "environment",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-gp57mbov",
+        "source": "layout--1781541304274-5zeg1w5l",
+        "target": "layout--1781541304274-fzb0hgvf",
+        "sourceHandle": "out",
+        "targetHandle": "b",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false,
+        "label": "number"
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-steaxwuw",
+        "source": "layout--1781541304274-fmoax2sm",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-zyxbomhq",
+        "source": "layout--1781541304274-5b1mavlr",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-w4zo6ao1",
+        "source": "layout--1781541304274-u7k08e8b",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-9rttju93",
+        "source": "layout--1781541304274-qj20w84t",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-8gysp99j",
+        "source": "layout--1781541304274-dr3hwn3w",
+        "target": "layout--1781541304274-g36gqn1g",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "event",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-x22hvepu",
+        "source": "layout--1781541304274-g36gqn1g",
+        "target": "layout--1781541304274-wvlr3q7w",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "boolean",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-t85ndxsk",
+        "source": "layout--1781541304274-dr3hwn3w",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-34cxvmzr",
+        "source": "layout--1781541304274-wvlr3q7w",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "math-1781583032120-703",
+        "sourceHandle": "out",
+        "target": "layout--1781541304274-fmoax2sm",
+        "targetHandle": "in",
+        "id": "math-1781583032120-703-layout--1781541304274-fmoax2sm-1781583047782",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "scene-time-1781583054908-4",
+        "sourceHandle": "seconds",
+        "target": "math-1781583032120-703",
+        "targetHandle": "a",
+        "id": "scene-time-1781583054908-4-math-1781583032120-703-1781583057943",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "map-range-1781583706774-576",
+        "sourceHandle": "out",
+        "target": "layout--1781541304274-5b1mavlr",
+        "targetHandle": "in",
+        "id": "map-range-1781583706774-576-layout--1781541304274-5b1mavlr-1781583710978",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "math-1781583032120-703",
+        "sourceHandle": "out",
+        "target": "map-range-1781583706774-576",
+        "targetHandle": "value",
+        "id": "math-1781583032120-703-map-range-1781583706774-576-1781583717407",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781598312078-odwns6kk",
+        "source": "layout--1781598312078-fgkdxtlt",
+        "target": "layout--1781598312078-z1739yix",
         "sourceHandle": "audio",
         "targetHandle": "audio",
         "animated": true,
@@ -259,9 +1817,9 @@
         "selected": false
       },
       {
-        "id": "demo-osc-e2",
-        "source": "demo-osc",
-        "target": "demo-osc-out",
+        "id": "studio-edge-edge-1781598312078-aizz85fn",
+        "source": "layout--1781598312078-fgkdxtlt",
+        "target": "layout--1781598312078-t1mjai69",
         "sourceHandle": "audio",
         "targetHandle": "audio",
         "animated": true,
@@ -274,11 +1832,1373 @@
     ],
     "rootNodes": [
       {
-        "id": "demo-osc",
+        "id": "frame_1781583006472_dgfrt",
+        "type": "studio-frame",
+        "position": {
+          "x": -61.16281885153431,
+          "y": -135.16669656069615
+        },
+        "data": {
+          "label": "Frame",
+          "padding": 16,
+          "headerHeight": 28,
+          "padTop": 4
+        },
+        "dragHandle": ".studio-frame-node__header",
+        "selectable": true,
+        "draggable": true,
+        "zIndex": -1,
+        "style": {
+          "width": 530.6548192675134,
+          "height": 190.13255447013157
+        },
+        "width": 530.6548192675134,
+        "height": 190.13255447013157,
+        "selected": false
+      },
+      {
+        "id": "demo-stage-model-select",
         "type": "studio",
         "position": {
-          "x": 72,
-          "y": 200
+          "x": 17.551408749024034,
+          "y": 32
+        },
+        "data": {
+          "label": "Model Source (PSoC E84)",
+          "category": "scene",
+          "nodeId": "model-select",
+          "defaultConfig": {
+            "selectedStudioAssetId": "model.tesa-drone",
+            "selectedModelUrl": "models/tesa-drone/tesa-drone.glb",
+            "generatedChildNodeIds": []
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "string",
+              "label": "Model"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 208,
+            "minHeight": 88,
+            "contentMinWidth": 219,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 290
+            },
+            "socketValuesVisible": false,
+            "bodyControlsVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 219,
+          "height": 64
+        },
+        "measured": {
+          "width": 219,
+          "height": 64
+        },
+        "width": 219,
+        "height": 64,
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "demo-scene-output",
+        "type": "studio",
+        "position": {
+          "x": 329.65481926751346,
+          "y": 37.82532878550589
+        },
+        "data": {
+          "label": "Scene Output",
+          "category": "scene",
+          "nodeId": "scene-output",
+          "defaultConfig": {
+            "showGrid": false,
+            "scene3d": {
+              "version": 1,
+              "model": {
+                "url": "models/psoc-e84-ai/psoc-e84-ai.glb",
+                "embeddedRigPolicy": "keep",
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotationDeg": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                }
+              },
+              "environment": {
+                "presetIndex": 0,
+                "studioAssetId": "env.cubemap.park",
+                "showBackgroundTexture": true,
+                "useCubemapIbl": true,
+                "iblStrength": 1,
+                "iblOffStrengthFrac": 0.45,
+                "yawDeg": 0,
+                "backgroundColorHex": "#09090b"
+              },
+              "renderer": {
+                "dprMin": 1,
+                "dprMax": 2,
+                "antialias": true,
+                "clearColorHex": "#09090b",
+                "toneMapping": "aces",
+                "toneMappingExposure": 0.55,
+                "outputColorSpace": "srgb",
+                "shadowsEnabled": false,
+                "shadowMapSize": 2048,
+                "shadowOrthoExtent": 32,
+                "shadowBias": -0.00018,
+                "shadowNormalBias": 0.04
+              },
+              "camera": {
+                "fovDeg": 55,
+                "frameMargin": 1.06,
+                "frameDirection": {
+                  "x": 1,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "nearDivisor": 200,
+                "farMultiplier": 200,
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 15,
+                    "z": 15
+                  },
+                  "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  }
+                }
+              },
+              "controls": {
+                "enableDamping": true,
+                "dampingFactor": 0.08,
+                "enablePan": true,
+                "enableRotate": true,
+                "enableZoom": true,
+                "screenSpacePanning": true,
+                "zoomToCursor": false,
+                "rotateSpeed": 1,
+                "zoomSpeed": 1,
+                "panSpeed": 1,
+                "keyRotateSpeed": 1,
+                "keyPanSpeed": 7,
+                "autoRotate": false,
+                "autoRotateSpeed": 2,
+                "minDistance": 0,
+                "maxDistance": null,
+                "minPolarAngleDeg": 0,
+                "maxPolarAngleDeg": 180,
+                "minAzimuthDeg": null,
+                "maxAzimuthDeg": null,
+                "minTargetRadius": 0,
+                "maxTargetRadius": null,
+                "mouseButtons": {
+                  "left": "ROTATE",
+                  "middle": "DOLLY",
+                  "right": "PAN"
+                },
+                "touches": {
+                  "one": "ROTATE",
+                  "two": "DOLLY_PAN"
+                }
+              },
+              "lights": {
+                "ambient": {
+                  "colorHex": "#ffffff",
+                  "intensity": 0.22
+                },
+                "directionals": [
+                  {
+                    "id": "studio-main",
+                    "colorHex": "#ffffff",
+                    "intensity": 0,
+                    "position": {
+                      "x": 2.5,
+                      "y": 3.5,
+                      "z": 2
+                    }
+                  }
+                ]
+              },
+              "helpers": {
+                "grid": {
+                  "enabled": false,
+                  "size": 24,
+                  "divisions": 96,
+                  "colorCenterHex": "#71717a",
+                  "colorGridHex": "#3f3f46",
+                  "opacity": 0.85,
+                  "y": -0.35
+                },
+                "axes": {
+                  "enabled": false,
+                  "length": 3,
+                  "opacity": 0.9
+                },
+                "camera": {
+                  "enabled": false
+                },
+                "directionalLight": {
+                  "enabled": false,
+                  "planeSize": 1,
+                  "attachToDirectionalId": null
+                }
+              },
+              "fog": {
+                "enabled": false,
+                "mode": "linear",
+                "near": 1,
+                "far": 50,
+                "density": 0.05,
+                "colorHex": "#1a1a2e"
+              },
+              "postProcessing": {
+                "enabled": false,
+                "enableBloom": true,
+                "bloomIntensity": 1.5,
+                "bloomThreshold": 1
+              },
+              "contactShadows": {
+                "enabled": false,
+                "opacity": 0.5,
+                "blur": 2,
+                "far": 10,
+                "scale": 10,
+                "colorHex": "#000000"
+              },
+              "particleEmitter": {
+                "enabled": false,
+                "preset": "sparks",
+                "trigger": 0,
+                "rate": 0,
+                "life": 1,
+                "colorHex": "#ffaa00",
+                "target": ""
+              },
+              "physics": {
+                "enabled": false,
+                "gravityY": -9.81
+              }
+            }
+          },
+          "inputHandles": [
+            {
+              "id": "models",
+              "portType": "string",
+              "label": "Models"
+            },
+            {
+              "id": "meshes",
+              "portType": "mesh",
+              "label": "Meshes"
+            },
+            {
+              "id": "env",
+              "portType": "environment",
+              "label": "Environment"
+            },
+            {
+              "id": "cam",
+              "portType": "camera",
+              "label": "Camera"
+            },
+            {
+              "id": "anim",
+              "portType": "glbAnimation",
+              "label": "Animation"
+            },
+            {
+              "id": "xf",
+              "portType": "transform",
+              "label": "Transform"
+            },
+            {
+              "id": "settings",
+              "portType": "number",
+              "label": "Exposure"
+            },
+            {
+              "id": "fog",
+              "portType": "fog",
+              "label": "Fog"
+            },
+            {
+              "id": "lite",
+              "portType": "studioLight",
+              "label": "Studio Light"
+            },
+            {
+              "id": "post",
+              "portType": "postProcessing",
+              "label": "Post-FX"
+            },
+            {
+              "id": "cshadow",
+              "portType": "contactShadows",
+              "label": "Contact Shadows"
+            },
+            {
+              "id": "emitter",
+              "portType": "particleEmitter",
+              "label": "Particles"
+            },
+            {
+              "id": "phys",
+              "portType": "physicsScene",
+              "label": "Physics"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 185,
+            "minHeight": 72,
+            "contentMinWidth": 185,
+            "contentMinHeight": 89,
+            "layoutWidthByChrome": {
+              "all": 274
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 185,
+        "style": {
+          "width": 185,
+          "height": 90
+        },
+        "measured": {
+          "width": 185,
+          "height": 90
+        },
+        "height": 90,
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "demo-stage-environment",
+        "type": "studio",
+        "position": {
+          "x": 16,
+          "y": 110.13255447013157
+        },
+        "data": {
+          "label": "Environment (Park)",
+          "category": "scene",
+          "nodeId": "environment",
+          "defaultConfig": {
+            "version": 1,
+            "presetIndex": 0,
+            "studioAssetId": "env.cubemap.park",
+            "showBackgroundTexture": true,
+            "useCubemapIbl": true,
+            "iblStrength": 1,
+            "iblOffStrengthFrac": 0.45,
+            "yawDeg": 0,
+            "backgroundColorHex": "#09090b",
+            "inputSocketVisibility": {},
+            "environmentControlsExpanded": true
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "environment",
+              "label": "Environment"
+            }
+          ],
+          "inputHandles": [],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {},
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": true,
+            "minWidth": 240,
+            "minHeight": 72,
+            "contentMinWidth": 240,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 247
+            },
+            "bodyControlsVisible": false,
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          }
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "width": 240,
+        "height": 64,
+        "style": {
+          "width": 240,
+          "height": 64
+        },
+        "parentId": "frame_1781583006472_dgfrt",
+        "extent": "parent",
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-5zeg1w5l",
+        "type": "studio",
+        "position": {
+          "x": 919.5752591302992,
+          "y": 547.9693266178015
+        },
+        "data": {
+          "label": "Limit 0.5",
+          "category": "generator",
+          "nodeId": "float-constant",
+          "defaultConfig": {
+            "value": 0.5,
+            "numberMode": "float",
+            "step": 0.01
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 99,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 100
+        },
+        "measured": {
+          "width": 170,
+          "height": 100
+        },
+        "width": 170,
+        "height": 100,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-fzb0hgvf",
+        "type": "studio",
+        "position": {
+          "x": 1182.2821035133998,
+          "y": 547.8943573828952
+        },
+        "data": {
+          "label": "Sine > 0.5",
+          "category": "logic",
+          "nodeId": "compare",
+          "defaultConfig": {
+            "operation": ">",
+            "publishToDashboard": true,
+            "onLabel": "Above",
+            "offLabel": "Below",
+            "onTone": "success",
+            "offTone": "danger",
+            "placement": {
+              "column": 4,
+              "row": 10,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 180,
+            "minHeight": 96,
+            "contentMinWidth": 180,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 180
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "a",
+              "portType": "number",
+              "label": "A"
+            },
+            {
+              "id": "b",
+              "portType": "number",
+              "label": "B"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 180,
+          "height": 88
+        },
+        "measured": {
+          "width": 180,
+          "height": 88
+        },
+        "width": 180,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-fmoax2sm",
+        "type": "studio",
+        "position": {
+          "x": 1439.1237141865108,
+          "y": 99.36128510364715
+        },
+        "data": {
+          "label": "Live value",
+          "category": "dashboard",
+          "nodeId": "dashboard-text",
+          "defaultConfig": {
+            "label": "Value",
+            "unit": "",
+            "decimals": 2,
+            "showStatusBar": true,
+            "placement": {
+              "column": 7,
+              "row": 10,
+              "columnSpan": 2,
+              "rowSpan": 1
+            },
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "rgba(228,228,231,0.95)"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ]
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-5b1mavlr",
+        "type": "studio",
+        "position": {
+          "x": 1624.4275797822934,
+          "y": 228.59737531553725
+        },
+        "data": {
+          "label": "Dashboard Gauge",
+          "category": "dashboard",
+          "nodeId": "dashboard-gauge",
+          "defaultConfig": {
+            "min": 0,
+            "max": 100,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 4,
+              "row": 5,
+              "columnSpan": 5,
+              "rowSpan": 3
+            },
+            "flex": {
+              "order": 2,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "200px"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-u7k08e8b",
+        "type": "studio",
+        "position": {
+          "x": 1433.0925166734235,
+          "y": 433.49664984824204
+        },
+        "data": {
+          "label": "Enable output",
+          "category": "dashboard",
+          "nodeId": "dashboard-switch",
+          "defaultConfig": {
+            "label": "Switch",
+            "value": true,
+            "placement": {
+              "column": 2,
+              "row": 2,
+              "columnSpan": 10,
+              "rowSpan": 1
+            },
+            "flex": {
+              "order": 0,
+              "grow": 0,
+              "shrink": 0,
+              "basis": "auto"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 76
+        },
+        "measured": {
+          "width": 170,
+          "height": 76
+        },
+        "width": 170,
+        "height": 76,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-qj20w84t",
+        "type": "studio",
+        "position": {
+          "x": 1426.1526828229844,
+          "y": 548.5058992970187
+        },
+        "data": {
+          "label": "Setpoint",
+          "category": "dashboard",
+          "nodeId": "dashboard-slider",
+          "defaultConfig": {
+            "label": "Slider",
+            "min": 0,
+            "max": 100,
+            "value": 50,
+            "step": 1,
+            "unit": "",
+            "decimals": 1,
+            "zones": [
+              {
+                "from": 0,
+                "to": 60,
+                "color": "#22d3ee"
+              },
+              {
+                "from": 60,
+                "to": 80,
+                "color": "#fbbf24"
+              },
+              {
+                "from": 80,
+                "to": 100,
+                "color": "#f87171"
+              }
+            ],
+            "placement": {
+              "column": 4,
+              "row": 9,
+              "columnSpan": 5,
+              "rowSpan": 1
+            },
+            "flex": {
+              "order": 1,
+              "grow": 1,
+              "shrink": 1,
+              "basis": "auto"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Value"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 76
+        },
+        "measured": {
+          "width": 170,
+          "height": 76
+        },
+        "width": 170,
+        "height": 76,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-dr3hwn3w",
+        "type": "studio",
+        "position": {
+          "x": 1392.5370443847055,
+          "y": 685.2024526363995
+        },
+        "data": {
+          "label": "Pulse LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-button",
+          "defaultConfig": {
+            "label": "Button",
+            "variant": "primary",
+            "placement": {
+              "column": 7,
+              "row": 4,
+              "columnSpan": 2,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 89,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            },
+            {
+              "id": "out",
+              "portType": "event",
+              "label": "Click"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 90
+        },
+        "measured": {
+          "width": 170,
+          "height": 90
+        },
+        "width": 170,
+        "height": 90,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-g36gqn1g",
+        "type": "studio",
+        "position": {
+          "x": 1692.589302145095,
+          "y": 697.955719123493
+        },
+        "data": {
+          "label": "Set Boolean",
+          "category": "logic",
+          "nodeId": "event-set-boolean",
+          "defaultConfig": {
+            "setTo": true,
+            "value": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "boolean",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "event",
+              "label": "Trigger"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-wvlr3q7w",
+        "type": "studio",
+        "position": {
+          "x": 1879.2009161350286,
+          "y": 393.34873363191457
+        },
+        "data": {
+          "label": "Dashboard LED",
+          "category": "dashboard",
+          "nodeId": "dashboard-led",
+          "defaultConfig": {
+            "label": "LED",
+            "onColor": "#22c55e",
+            "offColor": "#18181b",
+            "threshold": 0.5,
+            "blink": false,
+            "placement": {
+              "column": 4,
+              "row": 4,
+              "columnSpan": 3,
+              "rowSpan": 1
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 170,
+            "contentMinHeight": 87,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "outputHandles": [
+            {
+              "id": "widget",
+              "portType": "dashboardWidget",
+              "label": "Widget"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "in",
+              "portType": "boolean",
+              "label": "On"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 170,
+          "height": 88
+        },
+        "measured": {
+          "width": 170,
+          "height": 88
+        },
+        "width": 170,
+        "height": 88,
+        "selected": false
+      },
+      {
+        "id": "layout--1781541304274-jcbu22qd",
+        "type": "studio",
+        "position": {
+          "x": 2049.482533019459,
+          "y": 114.35483815219268
+        },
+        "data": {
+          "label": "Dashboard Output",
+          "category": "dashboard",
+          "nodeId": "dashboard-output",
+          "defaultConfig": {
+            "layout": {
+              "version": 1,
+              "mode": "grid",
+              "grid": {
+                "columns": 12,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "rowHeightPx": 48
+              },
+              "flex": {
+                "direction": "row",
+                "wrap": true,
+                "gapPx": 8,
+                "paddingPx": 16,
+                "alignItems": "stretch",
+                "justifyContent": "start"
+              }
+            },
+            "theme": {
+              "version": 1,
+              "preset": "studio-dark",
+              "canvasBackground": "#09090b",
+              "panelBackground": "#18181b",
+              "accentColor": "#22d3ee",
+              "textPrimary": "#e4e4e7",
+              "textSecondary": "#a1a1aa"
+            }
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 170,
+            "minHeight": 64,
+            "contentMinWidth": 172,
+            "contentMinHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 172
+            },
+            "socketValuesVisible": false,
+            "socketsExpanded": false
+          },
+          "inputHandles": [
+            {
+              "id": "widgets",
+              "portType": "dashboardWidget",
+              "label": "Widgets"
+            },
+            {
+              "id": "tabs",
+              "portType": "dashboardTab",
+              "label": "Tabs"
+            },
+            {
+              "id": "theme",
+              "portType": "dashboardTheme",
+              "label": "Theme"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "style": {
+          "width": 172,
+          "height": 64
+        },
+        "measured": {
+          "width": 172,
+          "height": 64
+        },
+        "width": 172,
+        "height": 64,
+        "selected": false
+      },
+      {
+        "id": "math-1781583032120-703",
+        "type": "studio",
+        "position": {
+          "x": 1113.9311964475442,
+          "y": 105.74382859535245
+        },
+        "width": 180,
+        "style": {
+          "width": 180,
+          "height": 100
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Math",
+          "category": "utility",
+          "nodeId": "math",
+          "defaultConfig": {
+            "operation": "sin"
+          },
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 180,
+            "minHeight": 96,
+            "layoutWidthByChrome": {
+              "all": 180
+            },
+            "contentMinWidth": 180,
+            "contentMinHeight": 87
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "a",
+              "portType": "number",
+              "label": "A"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 180,
+          "height": 100
+        },
+        "height": 100,
+        "selected": false
+      },
+      {
+        "id": "scene-time-1781583054908-4",
+        "type": "studio",
+        "position": {
+          "x": 838.0997040578139,
+          "y": 122.3458817883186
+        },
+        "width": 179,
+        "style": {
+          "width": 179,
+          "height": 102
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Scene Time",
+          "category": "scene",
+          "nodeId": "scene-time",
+          "defaultConfig": {},
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 170,
+            "minHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "contentMinWidth": 179,
+            "contentMinHeight": 89
+          },
+          "outputHandles": [
+            {
+              "id": "seconds",
+              "portType": "number",
+              "label": "Seconds"
+            },
+            {
+              "id": "frames",
+              "portType": "number",
+              "label": "Frames"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 179,
+          "height": 102
+        },
+        "height": 102,
+        "selected": false
+      },
+      {
+        "id": "map-range-1781583706774-576",
+        "type": "studio",
+        "position": {
+          "x": 1418.7033590862006,
+          "y": 231.9395897273595
+        },
+        "width": 173,
+        "style": {
+          "width": 173,
+          "height": 192
+        },
+        "dragHandle": ".studio-node-drag-handle",
+        "data": {
+          "label": "Map Range",
+          "category": "transform",
+          "nodeId": "map-range",
+          "defaultConfig": {
+            "value": 0,
+            "inMin": -1,
+            "inMax": 1,
+            "outMin": 0,
+            "outMax": 100,
+            "clamp": true
+          },
+          "ui": {
+            "allowBodyCollapse": true,
+            "resizable": false,
+            "minWidth": 170,
+            "minHeight": 64,
+            "layoutWidthByChrome": {
+              "all": 170
+            },
+            "contentMinWidth": 173,
+            "contentMinHeight": 191
+          },
+          "outputHandles": [
+            {
+              "id": "out",
+              "portType": "number",
+              "label": "Out"
+            }
+          ],
+          "inputHandles": [
+            {
+              "id": "value",
+              "portType": "number",
+              "label": "Value"
+            },
+            {
+              "id": "inMin",
+              "portType": "number",
+              "label": "From min"
+            },
+            {
+              "id": "inMax",
+              "portType": "number",
+              "label": "From max"
+            },
+            {
+              "id": "outMin",
+              "portType": "number",
+              "label": "To min"
+            },
+            {
+              "id": "outMax",
+              "portType": "number",
+              "label": "To max"
+            }
+          ],
+          "liveValue": null,
+          "liveHistory": [],
+          "livePlotHistory": {}
+        },
+        "measured": {
+          "width": 173,
+          "height": 192
+        },
+        "height": 192,
+        "selected": false
+      },
+      {
+        "id": "layout--1781598312078-fgkdxtlt",
+        "type": "studio",
+        "position": {
+          "x": -125.52464465454929,
+          "y": 203.40726439366037
         },
         "data": {
           "label": "Oscillator (sweep)",
@@ -295,8 +3215,19 @@
             "sweepCurve": "linear",
             "sweepDirection": "up-down",
             "sweepMode": "loop",
-            "gain": 0.05,
-            "gate": false
+            "gain": 0.5,
+            "gate": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 237,
+            "contentMinHeight": 304
           },
           "outputHandles": [
             {
@@ -329,41 +3260,27 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 220,
-            "minHeight": 72,
-            "layoutWidthByChrome": {
-              "all": 220
-            },
-            "contentMinWidth": 220,
-            "contentMinHeight": 303
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z",
-          "liveNumberByHandle": {
-            "level": 0
-          }
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "measured": {
-          "width": 220,
-          "height": 304
+          "width": 237,
+          "height": 305
         },
-        "width": 220,
-        "height": 304,
+        "width": 237,
+        "height": 305,
         "style": {
-          "width": 220,
-          "height": 304
+          "width": 237,
+          "height": 305
         },
         "selected": false
       },
       {
-        "id": "demo-osc-scope",
+        "id": "layout--1781598312078-z1739yix",
         "type": "studio",
         "position": {
-          "x": 418.67510378328984,
-          "y": 114.44730163446448
+          "x": 206.11834040151223,
+          "y": 136.63954532957385
         },
         "data": {
           "label": "Audio Scope",
@@ -373,7 +3290,7 @@
             "monitorModeEnabled": false,
             "sourceMode": "node",
             "sourceNodeId": "demo-osc",
-            "mode": "waveform",
+            "mode": "both",
             "fps": 30,
             "fftSize": 2048,
             "smoothing": 0.8,
@@ -393,6 +3310,17 @@
             "timeDivisions": 8,
             "freqBarCount": 64
           },
+          "ui": {
+            "resizable": true,
+            "allowBodyCollapse": false,
+            "minWidth": 280,
+            "minHeight": 168,
+            "layoutWidthByChrome": {
+              "all": 280
+            },
+            "contentMinWidth": 280,
+            "contentMinHeight": 307
+          },
           "inputHandles": [
             {
               "id": "audio",
@@ -407,18 +3335,7 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": true,
-            "allowBodyCollapse": false,
-            "minWidth": 280,
-            "minHeight": 168,
-            "layoutWidthByChrome": {
-              "all": 280
-            },
-            "contentMinWidth": 280,
-            "contentMinHeight": 307
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "width": 280,
@@ -430,11 +3347,11 @@
         "selected": false
       },
       {
-        "id": "demo-osc-out",
+        "id": "layout--1781598312078-t1mjai69",
         "type": "studio",
         "position": {
-          "x": 425.3858021922155,
-          "y": 471.48676970819787
+          "x": 210.38825023402893,
+          "y": 449.30382511913825
         },
         "data": {
           "label": "Audio Output",
@@ -448,8 +3365,19 @@
             "limiterEnabled": true,
             "maxGain": 0.25,
             "requiresUserGesture": true,
-            "gain": 0.15,
-            "gate": false
+            "gain": 0.25,
+            "gate": true
+          },
+          "ui": {
+            "resizable": false,
+            "allowBodyCollapse": true,
+            "minWidth": 220,
+            "minHeight": 72,
+            "layoutWidthByChrome": {
+              "all": 220
+            },
+            "contentMinWidth": 220,
+            "contentMinHeight": 223
           },
           "inputHandles": [
             {
@@ -470,18 +3398,7 @@
           ],
           "liveValue": null,
           "liveHistory": [],
-          "ui": {
-            "resizable": false,
-            "allowBodyCollapse": true,
-            "minWidth": 220,
-            "minHeight": 72,
-            "layoutWidthByChrome": {
-              "all": 220
-            },
-            "contentMinWidth": 220,
-            "contentMinHeight": 223
-          },
-          "lastUpdatedAt": "2026-06-07T09:38:56.213Z"
+          "livePlotHistory": {}
         },
         "dragHandle": ".studio-node-drag-handle",
         "measured": {
@@ -499,9 +3416,208 @@
     ],
     "rootEdges": [
       {
-        "id": "demo-osc-e1",
-        "source": "demo-osc",
-        "target": "demo-osc-scope",
+        "id": "demo-stage-e1",
+        "source": "demo-stage-model-select",
+        "target": "demo-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "models",
+        "animated": true,
+        "label": "string",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "demo-stage-e2",
+        "source": "demo-stage-environment",
+        "target": "demo-scene-output",
+        "sourceHandle": "out",
+        "targetHandle": "env",
+        "animated": true,
+        "label": "environment",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-gp57mbov",
+        "source": "layout--1781541304274-5zeg1w5l",
+        "target": "layout--1781541304274-fzb0hgvf",
+        "sourceHandle": "out",
+        "targetHandle": "b",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false,
+        "label": "number"
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-steaxwuw",
+        "source": "layout--1781541304274-fmoax2sm",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-zyxbomhq",
+        "source": "layout--1781541304274-5b1mavlr",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-w4zo6ao1",
+        "source": "layout--1781541304274-u7k08e8b",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-9rttju93",
+        "source": "layout--1781541304274-qj20w84t",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-8gysp99j",
+        "source": "layout--1781541304274-dr3hwn3w",
+        "target": "layout--1781541304274-g36gqn1g",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "event",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-x22hvepu",
+        "source": "layout--1781541304274-g36gqn1g",
+        "target": "layout--1781541304274-wvlr3q7w",
+        "sourceHandle": "out",
+        "targetHandle": "in",
+        "animated": true,
+        "label": "boolean",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-t85ndxsk",
+        "source": "layout--1781541304274-dr3hwn3w",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781541304274-34cxvmzr",
+        "source": "layout--1781541304274-wvlr3q7w",
+        "target": "layout--1781541304274-jcbu22qd",
+        "sourceHandle": "widget",
+        "targetHandle": "widgets",
+        "animated": true,
+        "label": "dashboardWidget",
+        "style": {
+          "strokeWidth": 2
+        },
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "math-1781583032120-703",
+        "sourceHandle": "out",
+        "target": "layout--1781541304274-fmoax2sm",
+        "targetHandle": "in",
+        "id": "math-1781583032120-703-layout--1781541304274-fmoax2sm-1781583047782",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "scene-time-1781583054908-4",
+        "sourceHandle": "seconds",
+        "target": "math-1781583032120-703",
+        "targetHandle": "a",
+        "id": "scene-time-1781583054908-4-math-1781583032120-703-1781583057943",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "map-range-1781583706774-576",
+        "sourceHandle": "out",
+        "target": "layout--1781541304274-5b1mavlr",
+        "targetHandle": "in",
+        "id": "map-range-1781583706774-576-layout--1781541304274-5b1mavlr-1781583710978",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "type": "default",
+        "animated": true,
+        "style": {
+          "strokeWidth": 2
+        },
+        "source": "math-1781583032120-703",
+        "sourceHandle": "out",
+        "target": "map-range-1781583706774-576",
+        "targetHandle": "value",
+        "id": "math-1781583032120-703-map-range-1781583706774-576-1781583717407",
+        "label": "number",
+        "selected": false
+      },
+      {
+        "id": "studio-edge-edge-1781598312078-odwns6kk",
+        "source": "layout--1781598312078-fgkdxtlt",
+        "target": "layout--1781598312078-z1739yix",
         "sourceHandle": "audio",
         "targetHandle": "audio",
         "animated": true,
@@ -512,9 +3628,9 @@
         "selected": false
       },
       {
-        "id": "demo-osc-e2",
-        "source": "demo-osc",
-        "target": "demo-osc-out",
+        "id": "studio-edge-edge-1781598312078-aizz85fn",
+        "source": "layout--1781598312078-fgkdxtlt",
+        "target": "layout--1781598312078-t1mjai69",
         "sourceHandle": "audio",
         "targetHandle": "audio",
         "animated": true,
@@ -527,7 +3643,9 @@
     ]
   },
   "dependencies": {
-    "modelUrls": [],
+    "modelUrls": [
+      "models/tesa-drone/tesa-drone.glb"
+    ],
     "dataChannels": [],
     "hdriPresets": []
   }
