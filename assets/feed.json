@@ -3,7 +3,7 @@
   "version": 1,
   "id": "ternion-official",
   "label": "TRN Official Assets",
-  "revision": "2026-07-20T12:20:18Z",
+  "revision": "2026-07-20T13:13:53Z",
   "baseUrl": "https://raw.githubusercontent.com/drsanti/ternion-3d-assets-free/main",
   "libraries": {
     "scene": {
