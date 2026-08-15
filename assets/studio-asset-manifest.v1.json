@@ -77,12 +77,28 @@
       "cubemapSetId": "bridge"
     },
     {
+      "id": "env.cubemap.yokohama",
+      "category": "environment",
+      "source": "pack",
+      "label": "Footpath",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Yokohama/",
+      "cubemapSetId": "Yokohama"
+    },
+    {
       "id": "env.cubemap.yokohama2",
       "category": "environment",
       "source": "pack",
       "label": "Lawn",
       "summary": "JPEG cubemap (six faces) · textures/cubemap/Yokohama2/",
       "cubemapSetId": "Yokohama2"
+    },
+    {
+      "id": "env.cubemap.yokohama3",
+      "category": "environment",
+      "source": "pack",
+      "label": "Night",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Yokohama3/",
+      "cubemapSetId": "Yokohama3"
     },
     {
       "id": "env.cubemap.park",
@@ -93,12 +109,44 @@
       "cubemapSetId": "park"
     },
     {
+      "id": "env.cubemap.storforsen",
+      "category": "environment",
+      "source": "pack",
+      "label": "River",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Storforsen/",
+      "cubemapSetId": "Storforsen"
+    },
+    {
+      "id": "env.cubemap.lycksele3",
+      "category": "environment",
+      "source": "pack",
+      "label": "Shore",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Lycksele3/",
+      "cubemapSetId": "Lycksele3"
+    },
+    {
       "id": "env.cubemap.snow",
       "category": "environment",
       "source": "pack",
       "label": "Snow",
       "summary": "JPEG cubemap (six faces) · textures/cubemap/snow/",
       "cubemapSetId": "snow"
+    },
+    {
+      "id": "env.cubemap.storforsen3",
+      "category": "environment",
+      "source": "pack",
+      "label": "Storforsen3",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Storforsen3/",
+      "cubemapSetId": "Storforsen3"
+    },
+    {
+      "id": "env.cubemap.storforsen4",
+      "category": "environment",
+      "source": "pack",
+      "label": "Waterfall",
+      "summary": "JPEG cubemap (six faces) · textures/cubemap/Storforsen4/",
+      "cubemapSetId": "Storforsen4"
     },
     {
       "id": "texture.hdri.apartment",
